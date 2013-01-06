@@ -4,7 +4,7 @@ layout: default
 
 <article class="post">
 	<h1 class="post-title beta">{{page.title}}</h1>
-    <h2 class="post-date milli">{{page.date}}</h2>
+    <h2 class="post-date milli">{{ page.date | date: "%d %B %Y" }}</h2>
 	{{content}}
 	
 	<div id="disqus_thread"></div>

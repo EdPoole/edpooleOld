@@ -6,5 +6,5 @@ title: "Archive of InactiveArtist"
 
 	{% for post in site.posts %}
 			<h1 class="post-title beta"><a href="{{post.url}}">{{post.title}}</a></h1>
-    		<h2 class="post-date milli">{{page.date}}</h2>
+    		<h2 class="post-date milli">{{ post.date | date: "%d %B %Y" }}</h2>
 	{% endfor %}
