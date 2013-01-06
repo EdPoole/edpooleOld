@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import "vars";
+@import "inuit.css/inuit";
+
+$sidebarFixed: 425px;
+$articleWidth: 680px;
+$borderColor: #E6E6E6;
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	border-top: 8px solid $brand-color;
+	font-family: "myriad-pro";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $heading-color;
+}
+
+p {
+	color: $font-body-color;
+	line-height: 1.8;
+}
+
+a {
+	color: $brand-color;
+	font-weight: bold;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	width: 100%;
+	border-bottom: 1px solid $borderColor;
+	.header-wrapper {
+		width: $articleWidth;
+		margin: 0 auto;
+		height: auto;
+		padding-left: 85px;
+		padding-right: 85px;
+		padding-top: 50px;
+		.blog-header {
+			text-align: center;
+			color: $brand-color;
+			margin-bottom: 0;
+		}
+		.blog-subheader {
+			text-align: center;
+			font-style: italic;
+			font-weight: 300;
+		}
+		.nav {
+			text-align: center;
+		}
+		.social-button {
+			padding-left: 20px;
+			padding-right: 20px;
+			&:first-child {
+				padding-left: 0;
+			}
+			&.github {
+				width: 9px;	
+				a {
+					background-image: url(../img/github.png);
+					height: 16px;
+					background-position-y: 16px;
+					&:hover {
+						background-position-y: 0;
+					}
+				}
+			}
+			&.dribbble {
+				width: 16px;
+				a {
+					background-image: url(../img/dribbble.png);
+					height: 16px;
+					background-position-y: 16px;
+					&:hover {
+						background-position-y: 0;
+					}
+				}
+			}
+			&.twitter {
+				width: 20px;
+				a {
+					background-image: url(../img/twitter.png);
+					height: 16px;
+					background-position-y: 16px;
+					&:hover {
+						background-position-y: 0;
+					}
+				}
+			}
+			&.instagram {
+				width: 16px;
+				a {
+					background-image: url(../img/instagram.png);
+					height: 16px;
+					background-position-y: 16px;
+					&:hover {
+						background-position-y: 0;
+					}
+				}
+			}
+			a {
+				background-size: 100%;
+				display: inline-block;
+				width: inherit;
+				text-indent: -9999px;
+			}
+		}
+	}
+}
+
+section {
+	width: 100%;
+	.section-wrapper {
+		width: $articleWidth;
+		margin: 0 auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 100;
+		}
+		.post {
+			 padding-bottom: 50px;
+			.post-title {
+				color: $brand-color;
+				margin-bottom: 0;
+				font-weight: bold;
+			}
+			.post-date {
+				font-style: italic;
+			}
+			.gist {
+				font-size: 0.8em;
+			}
+			p code {
+				border-radius: $brand-round;
+				border: 1px solid $brand-color;
+				padding-left: 4px;
+				padding-right: 4px;
+				font-size: 0.9em;
+				display: inline-block;
+				margin-left: 4px;
+				margin-right: 4px;
+				color: $brand-color;
+			}
+		}
+		.post-navigation {
+			border-top: 1px solid $borderColor;
+			padding-top: 20px;
+			a {
+				display: inline-block;
+			}
+			.next {
+				&.invisible {
+					display: none;
+				}
+
+			}
+			.previous {
+				float: right;
+				&.invisible {
+					display: none;
+				}
+			}
+			.back {
+				margin-top: 20px;
+				display: block;
+			}
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	border-top: 1px solid $borderColor;
+	border-bottom: 8px solid $brand-color;
+	padding-top: 50px;
+	.footer-wrapper {
+		margin: 0 auto;
+		width: $articleWidth;
+		height: auto;
+	}
+}
+
+@media only screen and (min-width : 1200px) {
+	body {
+		border-top: none;
+	}
+	header {
+		border-bottom: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: $sidebarFixed;
+		.header-wrapper {
+			width: $sidebarFixed;
+			.blog-header {
+				text-align: left;
+			}
+			.blog-subheader {
+				text-align: left;
+			}
+			.nav {
+				text-align: left;
+			}
+		}
+	}
+	section {
+		width: auto;
+		border-left: 1px solid $borderColor;
+		margin-left: $sidebarFixed;
+		min-height: 100%;
+		.section-wrapper {
+			width: $articleWidth;
+			position: relative;
+		}
+	}
+	footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		border-bottom: none;
+		width: $sidebarFixed;
+		.footer-wrapper {
+			width: $sidebarFixed;
+			padding-left: 85px;
+			padding-right: 85px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 680px) {
+	body {
+		font-size: 0.8em;
+	}
+	header {
+		width: 100%;
+		.header-wrapper {
+			width: 100%;
+		}
+	}
+	section {
+		width: 100%;
+		.section-wrapper {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	footer {
+		width: 100%;
+		.footer-wrapper {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

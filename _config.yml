@@ -1,0 +1,8 @@
+url: http://edpoole.github.com
+site_name: "CSS Architecture and Front-End Development"
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+pygments: true
+permalink: /articles/:title
+paginate: 3
