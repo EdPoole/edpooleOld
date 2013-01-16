@@ -30,7 +30,7 @@ One of my favourite reasons for working on personal projects are the "lack" of d
 
 If I'm not 100% happy with the outcome of a certain project, I can easily just not release it and take the time to get it to a standard I'm satisfied with. In this situation, the only person who "loses out" is me. Trying to explain to a client that their project they've paid for will be late because I'm not "completely happy" with the outcome, doesn't always go down well.
 
-### Motivation is of the upmost importance.
+### Motivation is of the utmost importance.
 
 At the end of the day, I do my job because I enjoy it. I think working in a creative industry would be very difficult if I received no satisfaction from doing what I do. Personal projects allow me to have full control over both my time and creativity, without having the pressures of adhering to a client's specification.
 
