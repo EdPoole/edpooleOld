@@ -204,6 +204,7 @@ footer {
 		position: fixed;
 		left: 0;
 		top: 0;
+
 		width: $sidebarFixed;
 		.header-wrapper {
 			width: $sidebarFixed;
@@ -232,6 +233,8 @@ footer {
 		position: fixed;
 		left: 0;
 		bottom: 0;
+		top: 205px;
+		overflow-x: scroll;
 		border-bottom: none;
 		width: $sidebarFixed;
 		.footer-wrapper {
