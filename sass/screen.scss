@@ -293,6 +293,17 @@ footer {
 	.focus {
 		display: none;
 	}
+	.site-title {
+		display: block;
+		text-align: center;
+	}
+	.site-nav {
+		display: block;
+		text-align: center;
+		float: none;
+		margin: 0 auto;
+		margin-top: 35px;
+	}
 
 	.blog-roll {
 		margin: 5px 0;
