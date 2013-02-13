@@ -6,13 +6,13 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>{{site.site_name}}</title>
- <link href="http://inactiveartist.com/feed.xml" rel="self"/>
- <link href="http://inactiveartist.com"/>
+ <link href="http://edpoole.me/feed.xml" rel="self"/>
+ <link href="http://edpoole.me"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{site.site_url}}</id>
  <author>
    <name>Ed Poole</name>
-   <email>hello@inactiveartist.com</email>
+   <email>hello@edpoole.me</email>
  </author>
 
  {% for post in site.posts %}

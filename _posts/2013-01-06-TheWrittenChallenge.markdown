@@ -2,10 +2,10 @@
 layout: post
 title: The Written Challenge.
 comments: true
-date: 6th January 2013
+date: 6th Jan 2013
+cover: written.jpg
+extract: 2013 has come, and like the joggers you only see at the start of January, I have decided to set myself a "New Year's Resolution".  However unlike the January joggers, I'd like to still be going by February. 
 ---
-
-2013 has come, and like the joggers you only see at the start of January, I have decided to set myself a "New Year's Resolution".  However unlike the January joggers, I'd like to still be going by February. 
 
 Here's a little confession. I haven't written anything of length in a long time. This probably all stems from my hatred of English whilst in school. Ever since studying maths based subjects at A level, and Computer Science at University, my need to write in well structured prose has rather diminished. Whilst I'm not sorry I stopped studying subjects that required me to write dull, pointless essays, I am rather sorry I stopped writing all together. 
 

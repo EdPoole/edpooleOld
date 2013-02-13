@@ -2,54 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{site.site_name}}</title>
+	<title>Blog</title>
 	<link rel="stylesheet" href="/stylesheets/screen.css">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-	<header>
-		<div class="header-wrapper">
-			<h1 class="beta blog-header">
-				<a href="/">Ed Poole</a>
-			</h1>
-			<h2 class="milli blog-subheader">Graphic Designer &amp; Front-end Developer.</h2>
-			<ul class="nav">
-				<li class="social-button twitter">
-					<a href="http://twitter.com/_ewp">Twitter</a>
-				</li>
-				<li class="social-button dribbble">
-					<a href="http://dribbble.com/edpoole">Dribbble</a>
-				</li>
-				<li class="social-button github">
-					<a href="http://github.com/edpoole">Github</a>
-				</li>
-				<li class="social-button instagram">
-					<a href="http://instagram.com/_ewp">Instagram</a>
-				</li>
-			</ul>
-		</div>
+	<header class="focus-mode wrapper cf">
+		<a class="site-title" href="/">Ed Poole</a>
+		<nav class="site-nav">
+			<a class="active" href="/">Articles</a>
+			<a href="/projects">Projects</a>
+			<a href="/about/">About</a>
+		</nav>
 	</header>
+		
+	{{content}}
 
-	<section>
-		<div class="section-wrapper">
-		{{content}}
-		</div>
-	</section>
-	
-	<footer>
-		<div class="footer-wrapper">
-			<p>Hey I'm Ed Poole, a Web designer and developer from the United Kingdom.</p> 
-			<p>I am currently employed at <a href="http://radweb.co.uk">Radweb</a> as a Graphic Designer whilst studying for a degree in Computer Science at the <a href="http://port.ac.uk">University of Portsmouth</a>.</p>
-			<p>You can usually find me <a href="http://dribbble.com/edpoole">pushing pixels</a>, <a href="http://github.com/EdPoole">writing code</a>, or <a href="http://twitter.com/_ewp">tweeting nonsense</a>.</p>
-			<p class="milli">&copy; Ed Poole 2013. This website has been created with the wonderful <a href="http://inuitcss.com">inuit.css</a> and <a href="http://jekyllrb.com">Jekyll</a> and is hosted for free, courtesy of <a href="http://github.com">Github</a>.</p>
-		</div>
+<!-- 	<section class="wrapper blog-pagination cf">
+		<p href="" class="next">Next</p>
+		<p href="" class="previous">Previous</p>
+	</section> -->
+	<footer class="focus-mode wrapper">
+		<p class="milli" class="">&copy; Ed Poole 2013. This website has been created with the wonderful <a href="http://inuitcss.com">inuit.css</a> and <a href="http://jekyllrb.com">Jekyll</a> and is hosted for free, courtesy of <a href="http://github.com">Github</a>.</p>
 	</footer>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="/javascripts/scripts.min.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/lri1knn.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script type="text/javascript">
-		var GoSquared = {};GoSquared.acct = "GSN-092357-O";(function(w){function gs(){w._gstc_lt = +new Date;var d = document, g = d.createElement("script");g.type = "text/javascript";g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";var s = d.getElementsByTagName("script")[0];s.parentNode.insertBefore(g, s);}w.addEventListener ?w.addEventListener("load", gs, false) :w.attachEvent("onload", gs);})(window);
-	</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="/javascripts/scripts.js"></script>
+<script type="text/javascript" src="//use.typekit.net/lri1knn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </body>
 </html>

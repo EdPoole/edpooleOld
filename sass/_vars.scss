@@ -12,14 +12,21 @@
  * Debug mode will visually highlight any potential markup/accessibility quirks
  * in the browser. Set to `true` or `false`.
  */
-$debug-mode:        false;
+$debug-mode:        false!default;
 
 
 /**
  * Do you want all elements to adopt `box-sizing:border-box;` as per
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
-$global-border-box: true;
+$global-border-box: true!default;
+
+
+/**
+ * Would you like to use Adam Whitcroft’s Batch icon font, as per:
+ * adamwhitcroft.com/batch ?
+ */
+$batch:             false!default;
 
 
 /**
@@ -41,17 +48,24 @@ $brand-round:        4px!default;
 $responsive:        true!default;
 
 /**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: $responsive parameter above must be enabled before enabling this.
+ */
+$responsive-extra:  false!default;
+
+/**
  * Responsive push and pull produce a LOT of code, only turn them on if you
  * definitely need them.
  */
-$responsive-push:   true!default;
+$responsive-push:   false!default;
 $responsive-pull:   false!default;
 
 /**
  * Tell inuit.css when breakpoints start.
  */
-$lap-start:         640px!default;
-$desk-start:        960px!default;
+$lap-start:         481px!default;
+$desk-start:        1024px!default;
+$desk-wide-start: 	1200px!default;
 
 
 /**
@@ -73,12 +87,31 @@ $micro-size:        10px!default;
 
 
 /**
+ * English quote marks?
+ */
+$english-quotes:    true!default;
+
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:    null;
+$close-quote:   null;
+
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true{
+    $open-quote:    «;
+    $close-quote:   »;
+}
+
+
+/**
  * Brand stuff
  */
-$brand-color:       #1e88d9!default;
-$brand-face:        "Open Sans", sans-serif!default;
-$font-body-color:	#7D7D7D!default;
-$heading-color:		#3A3A3A!default;
+$brand-color:       #4a8ec2!default;
+$brand-face:        "Helvetica Neue", sans-serif!default;
 
 
 /**

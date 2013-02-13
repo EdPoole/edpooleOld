@@ -3,11 +3,9 @@ layout: post
 title: Why I turn down freelance jobs.
 comments: true
 date: 13th January 2013
+cover: warning.jpg
+extract: Freelancing opportunities have started to present themselves since I've started work. However I've turned down every single one.
 ---
-
-Over the last few months, since starting my job, I have been presented with a number of freelance opportunities to earn myself "extra cash". Every single one however, I have turned down.
-
-### Freelancing is awesome.
 
 Don't get me wrong, I think freelancing is great; I've even done a fair bit myself. The trouble is, finding the time and motivation to open a client project once you've just finished an 8 hour day at work is really hard. 
 

@@ -1,10 +1,18 @@
 ---
 layout: default
-title: "Archive of InactiveArtist"
+title: "Archive of Edpoole.me"
 ---
 
 
 	{% for post in site.posts %}
-			<h1 class="post-title beta"><a href="{{post.url}}">{{post.title}}</a></h1>
-    		<h2 class="post-date milli">{{ post.date | date: "%d %B %Y" }}</h2>
+    	<article class="blog-roll cf">
+			<div class="blog-image-wrap">
+				<img src="/images/{{post.cover}}" alt=""> 
+			</div>
+			<div class="blog-info-wrap">
+				<h1 class="post-title epsilon"><a href="{{post.url}}">{{post.title}}</a></h1>
+				<p class="milli post-extract">{{post.extract}}</p>
+				<h2 class="post-date zeta">{{ post.date | date: "%d %b" }}</h2>
+			</div>
+		</article>
 	{% endfor %}
