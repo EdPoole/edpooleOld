@@ -3,7 +3,7 @@ layout: post
 title: The SASS Mixin you'll always need.
 comments: true
 date: 14th January 2013
-cover: sass.jpg
+cover: sasscover.jpg
 extract: One of the benefits of SCSS is the ability to write "mixins" - reusable snippets that we can repeat wherever necessary throughout our code.
 ---
 
