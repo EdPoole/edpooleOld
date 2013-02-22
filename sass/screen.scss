@@ -61,6 +61,7 @@ img {
 
 p {
 	font-family: "adelle", serif;
+	line-height: 1.8;
 }
 
 a {
@@ -222,6 +223,9 @@ section .blog-post a {
 	}
 	h1 {
 		color: #515151;
+	}
+	li {
+		list-style: disc;
 	}
 }
 

@@ -27,7 +27,6 @@ $(function() {
 			$('html').css('background-color', 'white');
 			$('.focus').removeClass('toggle');
 		} else {
-			console.log('fuck');
 			$('.blog-image-wrap').animate({
 				height: '257px',
 				opacity: 100

@@ -5,4 +5,4 @@ rdiscount:
     extensions: [smart]
 pygments: true
 permalink: /articles/:title
-paginate: 3
+paginate: 5
