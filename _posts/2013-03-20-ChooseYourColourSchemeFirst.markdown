@@ -13,7 +13,7 @@ I realise that colours are one of those topics where everyone will have an opini
 
 ### Colour theory is your friend
 
-Tools like [Adobe Kuler](https://kuler.adobe.com/) and websites like [Colour Lovers](http://http://www.colourlovers.com/) are invaluable when it comes to choosing colours. Adobe Kuler has a fantastic interface for picking colours and it allows you to select multiple colour theory "layouts". This should almost always be your first port of call when deciding on your branding.
+Tools like [Adobe Kuler](https://kuler.adobe.com/) and websites like [Colour Lovers](http://www.colourlovers.com/) are invaluable when it comes to choosing colours. Adobe Kuler has a fantastic interface for picking colours and it allows you to select multiple colour theory "layouts". This should almost always be your first port of call when deciding on your branding.
 
 ### A tip for picking the right colours
 
