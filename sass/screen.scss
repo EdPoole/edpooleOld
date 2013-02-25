@@ -6,6 +6,13 @@
 $blue: #107BD7;
 $grey: #797979;
 
+body {
+	background-image: url(/images/mainbg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
 * {
 	// background-color: rgba(22, 22, 45, 0.1);
 
