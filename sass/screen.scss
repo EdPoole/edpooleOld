@@ -61,6 +61,10 @@ img {
 	margin: 0 auto;
 }
 
+h3 {
+	font-weight: 300;
+}
+
 p {
 	// font-family: "adelle", serif;
 	font-family: georgia, serif;
@@ -99,14 +103,14 @@ header {
 
 .site-title {
 	font-size: 1em;
-	font-weight: bold;
+	font-weight: 500;
 	text-transform: uppercase;
 }
 
 .site-nav {
 	float: right;
 	font-size: 1em;
-	font-weight: bold;
+	font-weight: 500;
 	text-transform: uppercase;
 	a {
 		margin-left: 20px;
