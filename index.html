@@ -7,13 +7,15 @@ layout: default
 	
 	{% for post in paginator.posts %}
 	<article class="blog-roll cf">
+		{% if forloop.first %}
 			<div class="blog-image-wrap">
 				<img src="/images/{{post.cover}}" alt=""> 
 			</div>
+		{% endif %}
 			<div class="blog-info-wrap">
-				<h1 class="post-title epsilon"><a href="{{post.url}}">{{post.title}}</a></h1>
-				<p class="milli post-extract">{{post.extract}}</p>
-				<h2 class="post-date zeta">{{ post.date | date: "%d %b" }}</h2>
+				<h2 class="post-date zeta">{{ post.date | date: "%B %d, %Y" }}</h2>
+				<h1 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h1>
+				<p class="post-extract">{{post.extract}}</p>
 			</div>
 	</article>
 	{% endfor %}
