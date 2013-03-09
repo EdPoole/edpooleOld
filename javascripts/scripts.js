@@ -6,7 +6,6 @@ $(function() {
 				height: 0,
 				opacity: 0
 			}, 1000, function() {
-			
 			});
 			$('header').animate({
 				opacity: 0
@@ -30,7 +29,7 @@ $(function() {
 				height: '257px',
 				opacity: 100
 			}, 1000, function() {
-			
+
 			});
 			$('header').animate({
 				opacity: 100
@@ -49,26 +48,14 @@ $(function() {
 
 
 	$('.comments-toggle.show-toggle').click(function() {
-		$('.comments').animate({
-			height: '374px'
-		}, 1000, function() {
-
-		});
+		$('.comments').css('height', '100%');
 		$('.comments-toggle.show-toggle').fadeOut();
 		$('.comments-toggle.hide-toggle').fadeIn().css('display', 'block');
 	});
 
 	$('.comments-toggle.hide-toggle').click(function() {
-		$('.comments').animate({
-			height: '0'
-		}, 1000, function() {
-
-		});
+		$('.comments').css('height', '0');
 		$('.comments-toggle.hide-toggle').fadeOut();
 		$('.comments-toggle.show-toggle').fadeIn().css('display', 'block');
 	});
-
-
-
-
 });

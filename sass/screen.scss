@@ -39,10 +39,14 @@ body {
 	background: rgba(0,0,0,0.3);
 	font-size: 0.6em;
 	font-weight: bold;
+	letter-spacing: -1px;
 }
 html {
 	background-color: #f6f4f1;
 	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	-o-transition: background-color 1s;
 	transition: background-color 1s;
 }
 
@@ -183,6 +187,12 @@ section .blog-post a {
 .comments {
 	height: 0;
 	overflow: hidden;
+	-webkit-transition: height 1s linear;
+	-moz-transition: height 1s linear;
+	-ms-transition: height 1s linear;
+	-o-transition: height 1s linear;
+	transition: height 1s linear;
+
 }
 
 #disqus_thread {
@@ -238,6 +248,11 @@ footer {
 	// padding: 20px 10px;
 	text-align: center;
 }
+
+.footer-top {
+	margin-bottom: 0;
+}
+
 
 
 
