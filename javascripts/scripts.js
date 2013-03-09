@@ -1,7 +1,6 @@
 $(function() {
 	$('.focus').click(function(e) {
 		e.preventDefault();
-		// var imageHeight = $('blog-image-wrap').height();
 		if($('.focus').hasClass('toggle')) {
 			$('.blog-image-wrap').animate({
 				height: 0,
