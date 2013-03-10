@@ -157,6 +157,9 @@ section .blog-post a {
 		line-height: 1.2em;
 		color: #242424;
 		font-weight: 300;
+		a {
+			color: #242424;
+		}
 	}
 	.post-extract {
 		
@@ -227,6 +230,10 @@ section .blog-post .comments-toggle {
 	font-size: 1em;
 	h3 {
 		line-height: 1.3em;
+		color: #242424;
+		&.extract {
+			color: #797979;
+		}
 	}
 }
 
