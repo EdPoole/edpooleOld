@@ -10,6 +10,10 @@ body {
 
 }
 
+pre {
+	white-space: normal;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -33,13 +37,17 @@ body {
 	position: fixed;
 	top: 10px;
 	left: 10px;
-	color: white;
+	color: #797979;
 	padding: 21px 12px;
 	border-radius: 100px;
-	background: rgba(0,0,0,0.3);
+	background: #EEEEEE;
 	font-size: 0.6em;
 	font-weight: bold;
 	letter-spacing: -1px;
+	&:hover {
+		color: white;
+		background: #A9A5A0;
+	}
 }
 html {
 	background-color: #f6f4f1;
@@ -188,13 +196,13 @@ section .blog-post a {
 }
 
 .comments {
-	height: 0;
-	overflow: hidden;
-	-webkit-transition: height 1s linear;
-	-moz-transition: height 1s linear;
-	-ms-transition: height 1s linear;
-	-o-transition: height 1s linear;
-	transition: height 1s linear;
+	
+	display: none;
+	// -webkit-transition: height 1s linear;
+	// -moz-transition: height 1s linear;
+	// -ms-transition: height 1s linear;
+	// -o-transition: height 1s linear;
+	// transition: height 1s linear;
 
 }
 
@@ -204,16 +212,16 @@ section .blog-post a {
 
 section .blog-post .comments-toggle {
 	text-align: center;
-	padding: 20px 0 0 0;
-	border-top: 1px solid #797979;
-	margin: 10px 25px 20px 25px;
+	padding: 25px 25px 20px 25px;
 	display: block;
 	cursor: pointer;
 	color: $grey;
 	text-decoration: none;
+	background: #eeeeee;
 	&:hover {
-		color: $blue;
+		color: white;
 		text-decoration: none;
+		background: #A9A5A0;
 	}
 	&.show-toggle {
 
@@ -260,6 +268,39 @@ footer {
 	margin-bottom: 0;
 }
 
+
+
+// GIST CONTENT 
+
+.gist .gist-file {
+	border: none !important;
+	border-radius: 3px !important;
+}
+
+.gist .gist-file .gist-data {
+	border: none !important;
+	background: #eeeeee !important;
+	.line-numbers {
+		background: #363535 !important;
+		color: white !important;
+		border: none !important;
+	}
+}
+
+.gist .gist-file .gist-meta {
+	background: none !important;
+	a {
+		color: $grey !important;
+		text-decoration: none !important;
+		&:hover {
+			color: $blue !important;
+		}
+	}
+}
+
+.file-data {
+	border: 1px solid #363535 !important;
+}
 
 
 

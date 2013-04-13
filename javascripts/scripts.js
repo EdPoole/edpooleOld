@@ -48,9 +48,10 @@ $(function() {
 
 
 	$('.comments-toggle.show-toggle').click(function() {
-		$('.comments').css('height', '100%');
-		$('.comments-toggle.show-toggle').fadeOut();
-		$('.comments-toggle.hide-toggle').fadeIn().css('display', 'block');
+		// $('.comments').css('height', '100%');
+		$('.comments').slideToggle();
+		// $('.comments-toggle.show-toggle').fadeOut();
+		// $('.comments-toggle.hide-toggle').fadeIn().css('display', 'block');
 	});
 
 	$('.comments-toggle.hide-toggle').click(function() {
