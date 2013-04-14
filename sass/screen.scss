@@ -14,6 +14,17 @@ pre {
 	white-space: normal;
 }
 
+
+code {
+	font-size: 0.8em;
+	display: inline-block;
+	padding: 0 0.5em;
+	border: 1px solid #B1B1B1;
+	border-radius: 3px;
+	background: #F6F4F1;
+	margin: 0 0.3em;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -279,10 +290,11 @@ footer {
 
 .gist .gist-file .gist-data {
 	border: none !important;
-	background: #eeeeee !important;
+	background: #F6F4F1 !important;
+	border-radius: 3px;
 	.line-numbers {
-		background: #363535 !important;
-		color: white !important;
+		background: #B1B1B1 !important;
+		color: #242424 !important;
 		border: none !important;
 	}
 }
@@ -299,7 +311,7 @@ footer {
 }
 
 .file-data {
-	border: 1px solid #363535 !important;
+	border: 1px solid #B1B1B1 !important;
 }
 
 
