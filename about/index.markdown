@@ -1,5 +1,6 @@
 ---
 layout: aboutlayout
+title: About me.
 cover: about.jpg
 ---
 
