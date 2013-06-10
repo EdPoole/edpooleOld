@@ -3,7 +3,7 @@ layout: post
 title: WWDC 2013
 comments: true
 date: 9th June 2013
-cover: wwdc2013.jpg
+cover: wwdc.jpg
 extract: It's that time of year again where Apple tease us with their new advancements in both iOS and OS X. As the Keynote has just finished, I thought I'd share my gut reaction to today's announcements.
 ---
 
