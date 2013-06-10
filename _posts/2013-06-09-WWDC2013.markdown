@@ -45,7 +45,7 @@ Ignoring the icons, the apps themselves have undergone some quite beautiful impr
 
 - __Siri:__ What designer doesn't like thin, white text over blurred backgrounds? Siri seems to be a whole year of Dribbble design trends compiled onto one awesome screen.
 
-- __Mail:__ A truly crisp and clean interface here, as with most of iOS7. The type is what really makes this app. Although I believe it is set in Helvetica Neue, it's beautifully weighted and helps keep the minimal feel beautifully.
+- __Mail:__ A truly crisp and clean interface here, as with most of iOS7. The type is what really makes this app. Although I believe it is set in Helvetica Neue, it's weighted perfectly and helps keep the minimal feel beautifully.
 
 - __Weather:__ This is by far the nicest looking app on iOS7. Can't help feel Apple may have [stolen inspiration](http://dribbble.com/search?q=weather+app) from Dribbble though.
 
