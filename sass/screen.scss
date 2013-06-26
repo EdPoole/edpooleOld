@@ -7,8 +7,7 @@ $blue: #107BD7;
 $grey: #797979;
 
 body {
-	border-top: 2px solid $blue;
-	border-bottom: 2px solid $blue;
+	border-top: 2px solid $blue;	
 }
 
 pre {
@@ -75,6 +74,7 @@ code {
 html {
 	// background-color: #f6f4f1;
 	background-color: white;
+	border-bottom: 2px solid $blue;
 	-webkit-transition: background-color 1s;
 	-moz-transition: background-color 1s;
 	-ms-transition: background-color 1s;
