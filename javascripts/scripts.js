@@ -1,7 +1,16 @@
+var windowWidth = $(window).innerWidth();
+
+
+
+// Reset the fucking stupid super-expanding disqus comment block.
+
+$(window).scroll(function() {
+	var dsqHeight = $('#dsq1').height();
+	console.log(dsqHeight);
+	$('#dsq1').css("height", "auto");
+});
+
 $(function() {
-
-	$('#dsq1').removeAttr("style");
-
 
 	$('.focus').click(function(e) {
 		e.preventDefault();
@@ -49,8 +58,6 @@ $(function() {
 			$('.focus').removeClass('active');
 		}
 	});
-
-	console.log($('.comments').height());
 
 	$('.comments-toggle.show-toggle').click(function() {
 		$('.comments').slideToggle();
