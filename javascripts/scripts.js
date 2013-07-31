@@ -1,7 +1,5 @@
 var windowWidth = $(window).innerWidth();
 
-
-
 // Reset the fucking stupid super-expanding disqus comment block.
 
 $(window).scroll(function() {
