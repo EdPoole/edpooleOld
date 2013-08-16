@@ -331,8 +331,111 @@ img.feed-image {
 	}
 }
 
-
-
+.portfolio-row {	
+	.portfolio-content-wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		.portfolio-heading {
+			font-weight: 100;
+		}
+		.portfolio-content {
+			width: 50%;
+			display: inline-block;
+			padding: 50px 0;
+		}
+		.portfolio-image {
+			width: 50%;
+			display: inline-block;
+		}
+		.portfolio-link {
+			background-color: rgba(255, 255, 255, 0.1);
+			padding: 10px 20px;
+			border-radius: 3px;
+			display: inline-block;
+		}
+	}
+	&.one-liner-commits {
+		 background-color: #323A40;
+		 color: white;
+		.portfolio-heading {
+			color: #d0d1e9;
+		}
+		.portfolio-paragraph {
+			color: #878798;
+		}
+		.portfolio-link {
+			color: #d0d1e9;
+			font-weight: 100;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	&.layerstyles {
+		background-color: #DF4D4F;
+		.portfolio-heading {
+			color: white;
+		}
+		.portfolio-paragraph {
+			color: #f2bebf;
+		}
+		.portfolio-link {
+			color: #f2bebf;
+			font-weight: 100;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	&.mdnotes {
+		background-color: #383838;
+		.portfolio-heading {
+			color: #EF5A34;
+		}
+		.portfolio-paragraph {
+			color: #ef6f4f;
+		}
+		.portfolio-link {
+			color: #ef6f4f;
+			font-weight: 100;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	&.css-colours {
+		background-color: #4169E1;
+		.portfolio-heading {
+			color: #bdcbf4;
+		}
+		.portfolio-paragraph {
+			color: #a9b9ea;
+		}
+		.portfolio-link {
+			color: #bdcbf4;
+			font-weight: 100;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	&.graphic-design {
+		background-color: #91d23e;
+		.portfolio-heading {
+			color: #4b7416;
+		}
+		.portfolio-paragraph {
+			color: #5a8b1d;
+		}
+		.portfolio-link {
+			color: #4b7416;
+			font-weight: 100;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
 // GIST CONTENT 
 
 .gist .gist-file {
