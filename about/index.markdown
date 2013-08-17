@@ -1,6 +1,6 @@
 ---
 layout: aboutlayout
-title: About me.
+title: About | Ed Poole
 cover: about.jpg
 ---
 

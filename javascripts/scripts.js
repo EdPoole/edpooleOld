@@ -110,7 +110,7 @@ $(function() {
 		globalList = jQuery.grep(globalList, function(n, i){
 			return (n !== "" && n != null);
 		});
-		for (var i = 0; i < 30; i++) {		
+		for (var i = 0; i < 2; i++) {		
 			$('.feed-container').append('<div class="feed-wrapper"><img class="feed-image" src="' + globalList[i] + '" /></div>');
 		}
 	}
