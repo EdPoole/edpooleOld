@@ -352,6 +352,9 @@ img.feed-image {
 			font-weight: 100;
 			text-align: center;
 			font-size: 30px;
+			@media only screen and (max-width: 680px) {
+				font-size: 20px;
+			}
 			background-color: rgba(255, 255, 255, 0.1);
 			padding: 10px 20px;
 			border-radius: 3px;
