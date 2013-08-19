@@ -3,7 +3,7 @@ layout: post
 title: Just Delete Me.
 comments: true
 date: 19th August 2013
-cover: justdelete.jpg
+cover: jstdelete.jpg
 extract: Last week, I spent the best part of an hour ranting at <a href="http://robblewis.me">Robb Lewis</a> about the inability to delete my Netflix Account. In a bid to shut me up, he created <a href="http://justdelete.me">justdelete.me</a>, a directory of direct links to delete your account from various web services.
 ---
 
