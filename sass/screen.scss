@@ -450,6 +450,18 @@ img.feed-image {
 		}
 	}
 }
+
+.wired-link {
+	background-image: url(../images/portfolio/wired-white.png);
+	background-repeat: no-repeat;
+	background-size: 150px 31px;
+	display: inline-block;
+	text-indent: -9999px;
+	width: 150px;
+	height: 31px;
+	margin-left: 5px;
+}
+
 // GIST CONTENT 
 
 .gist .gist-file {
