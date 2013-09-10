@@ -7,10 +7,12 @@ layout: default
 	
 	{% for post in paginator.posts %}
 	<article class="blog-roll cf">
-		{% if forloop.first %}
-			<div class="blog-image-wrap">
-				<img src="/images/{{post.cover}}" alt=""> 
-			</div>
+		{% if paginator.page == 1 %}
+			{% if forloop.first %}		
+				<div class="blog-image-wrap">
+					<img src="/images/{{post.cover}}" alt=""> 
+				</div>
+			{% endif %}
 		{% endif %}
 			<div class="blog-info-wrap">
 				<h2 class="post-date zeta">{{ post.date | date: "%B %d, %Y" }}</h2>
