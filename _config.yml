@@ -6,3 +6,4 @@ rdiscount:
 pygments: true
 permalink: /articles/:title
 paginate: 5
+baseurl: /articles/
