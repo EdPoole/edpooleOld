@@ -32,10 +32,6 @@ $media-tablet-landscape:	'min-width: ' + $tablet-portrait-end + ') and (max-widt
 $media-tablet-portrait:	'min-width: ' + $mobile-end + ') and (max-width:' + $tablet-portrait;
 $media-mobile:	'max-width: ' + $mobile;
 
-// Sizes
-
-$wrapper-size: 900px;
-$content-size: 650px;
 
 // Colours
 
@@ -46,16 +42,7 @@ $dark: #323945;
 
 // Assigned Colours
 
-$body-background: $light;
-$content-background: $white;
-$footer-background: $dark;
-
-$top-header-color: $dark;
-$bottom-header-color: $dark;
-$body-copy-color: $dark;
-$body-link-color: $brand;
-
-$highlight-color: $brand;
+$brand: #147BD7;
 
 // Fonts
 
