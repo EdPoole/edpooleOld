@@ -6,14 +6,10 @@
 @import "core/typography";
 @import "core/animations";
 
-@import "components/type-groups";
-@import "components/buttons";
+@import "layouts/page";
+@import "layouts/post";
 
-@import "sections/header";
-@import "sections/footer";
-@import "sections/blogpost";
-@import "sections/blogextract";
-
-
-section {	
-}
+@import "includes/header";
+@import "includes/footer";
+@import "includes/navigation";
+@import "includes/portfolio";
