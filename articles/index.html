@@ -1,12 +1,53 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>ADFDSFSDKJG</title>
-</head>
-<body>
+---
+layout: default
+---
+<!-- {% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date }}</span>
+  </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+{% endfor %}
 
-	SD:GJSDGLKJSGL
+
+ -->
+
+<section class="wrapper blogroll">
 	
-</body>
-</html>
+	{% for post in paginator.posts %}
+	<article class="blog-roll cf">
+		{% if paginator.page == 1 %}
+			{% if forloop.first %}		
+				<div class="blog-image-wrap">
+					<img src="/images/{{post.cover}}" alt=""> 
+				</div>
+			{% endif %}
+		{% endif %}
+			<div class="blog-info-wrap">
+				<h2 class="post-date zeta">{{ post.date | date: "%B %d, %Y" }}</h2>
+				<h1 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h1>
+				<p class="post-extract">{{post.extract}}</p>
+			</div>
+	</article>
+	{% endfor %}
+
+</section>
+
+	<div class="wrapper blog-pagination cf">
+		{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+				<a href="/" class="previous">Next</a>
+			{% else %}
+				<a href="/page{{paginator.previous_page}}" class="previous">Next</a>
+			{% endif %}
+		{% else %}
+			<a href="/" class="previous invisible">Next</a>
+		{% endif %}
+		{% if paginator.next_page %}
+			<a href="/page{{paginator.next_page}}" class="next">Previous</a>
+		{% else %}
+			<a class="next invisible">Previous</a>
+		{% endif %}
+	</div>
