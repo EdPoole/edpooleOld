@@ -1,0 +1,22 @@
+header {
+	background-color: $dark;
+	@include rem(padding, 10px);	
+	margin: 0 auto;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	.logo {
+		display: inline-block;
+		max-width: 20px;
+		vertical-align: middle;
+	}
+	.site-name {
+		display: inline-block;
+		color: $white;
+		font-weight: 100;
+		@include rem(margin, 0 0 0 10px);
+		@include rem(font-size, 18px);
+		vertical-align: middle;
+	}
+}

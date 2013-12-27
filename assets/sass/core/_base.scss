@@ -1,0 +1,53 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: $brand;
+	background-color: rgba($brand, 0.8);
+	color: $white;
+}
+
+body {
+	background-color: $body-background;
+}
+
+img {
+	max-width: 100%;	
+}
+
+.wrapper-size {
+	max-width: $wrapper-size;
+	margin: 0 auto;
+}
+.content {
+	max-width: $content-size;
+	background-color: $content-background;
+	margin: 0 auto;
+	overflow: auto;
+	> *:not(img) {
+		@media only screen and ($media-desktop) {
+			padding: 0 50px;
+		}
+		@media only screen and ($media-laptop) {
+			padding: 0 40px;
+		}
+		@media only screen and ($media-tablet-landscape) {
+			padding: 0 30px;
+		}
+		@media only screen and ($media-tablet-portrait) {
+			padding: 0 30px;
+		}
+		@media only screen and ($media-mobile) {
+			padding: 0 20px;
+		}
+	}
+	> blockquote {
+		@include rem(padding, 20px 30px 20px 30px);
+	}
+	> pre {
+		padding: 0;
+	}
+}

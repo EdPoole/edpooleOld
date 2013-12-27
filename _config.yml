@@ -7,4 +7,4 @@ pygments: true
 permalink: /articles/:title
 paginate_path: 'articles/:num'
 paginate: 5
-# baseurl: /
+baseurl: /
