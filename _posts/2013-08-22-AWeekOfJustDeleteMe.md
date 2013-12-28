@@ -3,8 +3,8 @@ layout: post
 title: A week of Just Delete Me
 comments: true
 date: 23rd August 2013
-cover: jdmupdate.jpg
-extract: The last week of <a href="http://justdelete.me">justdelete.me</a> has been crazy. <a href="http://robblewis.me">Robb</a> and I couldn't have imagined the attention it has received.
+cover: a-week-of-just-delete-me.jpg
+extract: The last week of justdelete.me has been crazy. Robb and I couldn't have imagined the attention it has received.
 ---
 
 By the end of Monday we had around 3000 page views. To us, this was the greatest thing ever. Who would have thought that a simple site like just delete me could gain that many views. But that was only the start.

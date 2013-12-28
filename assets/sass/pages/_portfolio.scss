@@ -1,0 +1,36 @@
+
+
+.hero--portfolio {
+	background-image: url(img/hero/portfolio.jpg);
+}
+
+.hero--portfolio__title {
+	@include rem(padding, 210px 0 0 0);
+}
+
+.hero--portfolio__subtitle {
+	font-weight: 300;
+}
+
+.hero--portfolio__content {
+	@extend .g-i;
+	@extend .desktop--one-half;
+	@extend .laptop--one-half;
+	@extend .tablet-landscape--one-half;
+	height: 500px;	
+}
+
+.hero--portfolio__image {
+	@extend .g-i;
+	@extend .desktop--one-half;
+	@extend .laptop--one-half;
+	@extend .tablet-landscape--one-half;
+	position: relative;
+	height: 500px;
+	img {
+		width: 470px;
+		bottom: 0;
+		position: absolute;
+		margin-left: 60px;
+	}
+}

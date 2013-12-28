@@ -4,6 +4,10 @@
 	margin:0 auto;
 	padding:0;
 	max-width: 1180px;
+	@include rem(padding, 0 20px);
+	@media only screen and ($media-desktop) {
+		padding: 0;
+	}	
 }
 
 .g-i,

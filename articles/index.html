@@ -9,8 +9,8 @@ layout: page
 	</div>
 </section>
 
-<section class="content content--article">
-	<div class="g">
+<div class="g">
+	<section class="content content--article">
 		{% for post in paginator.posts %}
 		<a href="{{post.url}}" class="content--article__link">		
 			<h1 class="content--article__title">{{post.title}}</h1>
@@ -18,14 +18,18 @@ layout: page
 			<h2 class="content--article__date">{{ post.date | date: "%B %d, %Y" }}</h2>
 		</a>
 		{% endfor %}
-	</div>
-</section>
+	</section>
+</div>
 
 <div class="content content--pagination">
-	{% if paginator.previous_page %}
-		<a href="/page{{paginator.previous_page}}" class="content--pagination__previous">Previous</a>
+	{% if paginator.previous_page %}		
+		{% if paginator.previous_page == 1 %}
+			<a href="/articles/" class="content--pagination__previous">Newer Posts</a>
+		{% else %}
+			<a href="/articles/{{paginator.previous_page}}" class="content--pagination__previous">Newer Posts</a>
+		{% endif %}
 	{% endif %}
 	{% if paginator.next_page %}
-		<a href="/page{{paginator.next_page}}" class="content--pagination__next">Next</a>
+		<a href="/articles/{{paginator.next_page}}" class="content--pagination__next">Older Posts</a>
 	{% endif %}
 </div>

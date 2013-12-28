@@ -1,158 +1,126 @@
 
 
 body {
-	@include rem(font-size, 16px);
-	color: $body-copy-color;
+	font-size: 100%;
 	font-family: $family--sans;
-	@media only screen and ($media-desktop) {
-		@include rem(font-size, 16px);
-	}
-	@media only screen and ($media-laptop) {
-		@include rem(font-size, 16px);
-	}
-	@media only screen and ($media-tablet-landscape) {
-		@include rem(font-size, 16px);
-	}
-	@media only screen and ($media-tablet-portrait) {
-		@include rem(font-size, 15px);
-	}
-	@media only screen and ($media-mobile) {
-		@include rem(font-size, 14px);
-	}
 }
 
-h1 {
-	@include rem(font-size, 40px);
-	@include rem(margin, 40px 0);
-	font-weight: 100;
-	font-family: $family--sans;
-	line-height: 1.2;
-	color: $top-header-color;
-}
-h2 {
-	@include rem(font-size, 32px);
-	@include rem(margin, 32px 0);
-	font-weight: 100;
-	font-family: $family--sans;
-	line-height: 1.2;
-	color: $top-header-color;
-}
-h3 {
-	@include rem(font-size, 24px);
-	@include rem(margin, 24px 0);
-	font-weight: 100;
-	font-family: $family--sans;
-	line-height: 1.4;
-	color: $top-header-color;
-}
-h4 {
-	@include rem(font-size, 20px);
-	@include rem(margin, 20px 0);
-	line-height: 1.5;
-	font-family: $family--sans;
-	color: $bottom-header-color;
-}
-h5 {
-	@include rem(font-size, 18px);
-	@include rem(margin, 18px 0);
-	line-height: 1.5;
-	font-family: $family--sans;
-	color: $bottom-header-color;
-}
-h6 {
-	@include rem(font-size, 16px);
-	@include rem(margin, 18px 0);
-	line-height: 1.5;
-	font-family: $family--sans;
-	color: $bottom-header-color;
-}
+.content--post {
 
-p {
-	@include rem(margin, 20px 0);
-	font-family: $family--sans;
-	line-height: 1.8;
-	&.lede,
-	&.lead,
-	&:first-child,
-	&:first-of-type {
+	color: $brand--dark;
+	@include rem(padding, 40px 0);
+
+	h1 {
+		@include rem(font-size, 40px);
+		@include rem(margin, 40px 0);
+		font-weight: 700;
+		font-family: $family--serif;
+		line-height: 1.2;
+	}
+	h2 {
+		@include rem(font-size, 32px);
+		@include rem(margin, 32px 0);
+		font-weight: 700;
+		font-family: $family--serif;
+		line-height: 1.2;
+	}
+	h3 {
+		@include rem(font-size, 24px);
+		@include rem(margin, 24px 0);
+		font-weight: 700;
+		font-family: $family--serif;
+		line-height: 1.4;
+	}
+	h4 {
+		@include rem(font-size, 20px);
+		@include rem(margin, 20px 0);
+		line-height: 1.5;
+		font-family: $family--serif;
+	}
+	h5 {
 		@include rem(font-size, 18px);
-		font-weight: 100;
+		@include rem(margin, 18px 0);
+		line-height: 1.5;
+		font-family: $family--serif;
+	}
+	h6 {
+		@include rem(font-size, 16px);
+		@include rem(margin, 18px 0);
+		line-height: 1.5;
+		font-family: $family--serif;
+	}
+
+	p {
+		@include rem(margin, 24px 0);
+		@include rem(font-size, 22px);
+		@media only screen and ($media-mobile) {
+			@include rem(font-size, 16px);
+		}
+		font-weight: 300;
+		font-family: $family--serif;
+		line-height: 1.4;
+	}
+
+	li {
+		line-height: 1.8;
+	}
+
+
+	small {
+		font-size: 12px;
+	}
+
+	blockquote {	
 		line-height: 1.7;
+		@include rem(margin, 20px 0);
+		@include rem(text-indent, 30px);
+		position: relative;	
+		text-align: justify;
+		&:before {
+			position: absolute;
+			top: 7px;
+			left: -3px;
+			content: "“";
+			line-height: 1;
+			@include rem(font-size, 80px);
+		}
 	}
-}
 
-li {
-	line-height: 1.8;
-}
+	hr {
+		@include rem(margin, 40px 0);
+		border: none;
+	}
 
-
-small {
-	font-size: 12px;
-}
-
-blockquote {	
-	line-height: 1.7;
-	@include rem(margin, 20px 0);
-	@include rem(text-indent, 30px);
-	border-left: 5px solid $body-copy-color;
-	background-color: $content-background;
-	background-color: rgba($body-copy-color, 0.1);
-	position: relative;	
-	text-align: justify;
-	&:before {
-		position: absolute;
-		top: 7px;
-		left: -3px;
-		content: "“";
+	a {
+		@extend %fade-in;
+		display: inline-block;
 		line-height: 1;
-		@include rem(font-size, 80px);
+		color: $brand--dark;
+		&:hover {
+			text-decoration: underline;
+			color: $brand;
+		}
 	}
-}
 
-hr {
-	@include rem(margin, 40px 0);
-	border: none;
-	border-top: 1px solid $body-copy-color;
-}
 
-a {
-	color: $body-link-color;
-	text-decoration: none;
-	@extend %fade-in;
-	display: inline-block;
-	line-height: 1;
-	border-bottom: 1px solid $content-background;
-	&:hover {
-		border-bottom: 1px solid $body-link-color;
+
+	// pre {}
+	pre code {
+		@include rem(padding, 0 20px);
+		display: block;
+		tab-size:4;
+		-moz-tab-size: 4;
+		-o-tab-size:  4;
+	  	white-space: pre-wrap;
+	  	border: none;
+	  	background-color: #F7F7F7;
 	}
-}
 
-// pre {}
-pre code {
-	@include rem(padding, 0 20px);
-	display: block;
-	tab-size:4;
-	-moz-tab-size: 4;
-	-o-tab-size:  4;
-  	white-space: pre-wrap;
-  	border: none;
-  	background-color: $body-copy-color;
-  	color: $content-background;  	
-}
+	code {
+		display: inline-block;
+		@include rem(padding, 0 7px);
+		line-height: 1.4;		
+	}
 
-code {
-	display: inline-block;
-	@include rem(padding, 0 7px);
-	line-height: 1.4;
-	border: 1px solid $body-copy-color;
-}
 
-/***********************/
-/*                     */
-/*  Type Help Classes  */
-/*                     */
-/***********************/
-
-.text-upper {
-	text-transform: uppercase;
 }

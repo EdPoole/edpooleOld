@@ -1,20 +1,24 @@
 {% include header.html %}
-<section class="site-nav site-nav--article">
+<section class="site-nav">
 	{% include navigation.html %}
 </section>
 
-<section class="hero hero--article">
+<section class="hero hero--article" style="background-image: url(/assets/img/articles/{{page.cover}})">
 	<div class="g">
-		<h1 class="hero--article__title">{{page.title}}</h1>
-		<h2 class="hero--article__subtitle">{{page.extract}}</h2>
-		<h6 class="hero--article__date">{{ page.date | date: "%B %d, %Y" }}</h6>
+		<div class="article--center">
+			<h1 class="hero--article__title">{{page.title}}</h1>
+			<h2 class="hero--article__subtitle">{{page.extract}}</h2>
+			<h6 class="hero--article__date">{{ page.date | date: "%B %d, %Y" }}</h6>
+		</div>
 	</div>
 </section>
 
-<section class="content content--article">
-	<article class="content--article__post">
-		{{content}}
-	</article>
+<section class="content content--post">
+	<div class="g">
+		<article class="article--center">
+			{{content}}
+		</article>
+	</div>
 </section>
 
 {% include footer.html %}

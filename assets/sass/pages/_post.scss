@@ -1,0 +1,33 @@
+
+
+
+.hero--article__title {
+	@include rem(padding, 210px 0 0 0);
+	@include rem(font-size, 36px);
+	@media only screen and ($media-mobile) {
+		@include rem(padding, 170px 0 0 0);
+	}
+}
+
+.hero--article__subtitle {
+	@include rem(font-size, 20px);
+	@include rem(padding, 5px 0 0 0);
+	font-weight: 300;
+	font-style: italic;
+}
+
+.hero--article__date {
+	@include rem(padding, 20px 0 0 0);
+	text-transform: uppercase;
+}
+
+
+.article--center {
+	@extend .g-i;
+	@extend .desktop--three-fifths;
+	@extend .push--desktop--one-fifth;
+	@extend .laptop--three-fifths;
+	@extend .push--laptop--one-fifth;
+	@extend .tablet-landscape--four-fifths;
+	@extend .push--tablet-landscape--one-tenth;
+}

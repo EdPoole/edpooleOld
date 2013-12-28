@@ -33,18 +33,13 @@ $media-tablet-portrait:	'min-width: ' + $mobile-end + ') and (max-width:' + $tab
 $media-mobile:	'max-width: ' + $mobile;
 
 
-// Colours
-
-$white: #FFFFFF;
-$light: #f0f1ea;
-$brand: #FB6B49;
-$dark: #323945;
-
-// Assigned Colours
+// colours
 
 $brand: #147BD7;
+$brand--dark: #2F3340;
 
 // Fonts
 
-$family--serif: georgia, serif;
-$family--sans: helvetica;
+$family--serif: 'Sentinel A', 'Sentinel B', helvetica, sans-serif;
+$family--sans: 'Whitney A', 'Whitney B', helvetica, sans-serif;
+
