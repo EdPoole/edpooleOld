@@ -1,0 +1,87 @@
+.site-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	@include rem(font-size, 12px);
+	color: white;
+	@media only screen and ($media-mobile) {
+		z-index: auto;
+	}
+}
+
+.site-nav--page { // White background on non-blogpost pages
+	background-color: white;
+	color: $brand--dark;
+	.site-nav__links {
+		background-color: white;
+		a {
+			color: $brand--dark;
+		}
+	}
+	.burger-menu {
+		color: $brand--dark;
+	}
+}
+
+.site-nav__logo {	
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
+	@include rem(padding, 19px 0);
+	h1 {
+		font-weight: bold;
+		@include rem(font-size, 14px);
+		line-height: 1;
+	}
+	span {
+		font-weight: 300;
+	}
+}
+
+.site-nav__links {
+	float: right;
+	@media only screen and ($media-mobile) {
+		float: none;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		background-color: $brand--dark;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		@include rem(padding-top, 50px);
+	}
+	a {
+		line-height: 1;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include rem(padding, 19px 10px);
+		color: white;
+		font-weight: 500;
+	}
+	.site-nav__link {		
+		display: inline-block;
+		&:last-child {
+			@include rem(padding, 19px 0 19px 10px);
+		}
+		@media only screen and ($media-mobile) {
+			display: block;			
+		}	
+	}
+}
+
+.burger-menu {
+	display: none;	
+	@media only screen and ($media-mobile) {
+		display: inline-block;
+		float: right;
+		line-height: 1;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include rem(padding, 19px 10px);
+		color: white;
+		font-weight: 500;
+	}
+}
