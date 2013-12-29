@@ -56,7 +56,7 @@
 
 
 .content--pagination {
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 
@@ -71,10 +71,7 @@
 	font-weight: 700;
 	text-decoration: none;
 	@include rem(font-size, 24px);
-	@include rem(padding, 20px);
-	// border-top: 1px solid rgba($brand--dark, 0.4);
-	// border-bottom: 1px solid rgba($brand--dark, 0.4);
-	// border-right: 1px solid rgba($brand--dark, 0.4);
+	@include rem(padding, 20px);	
 	color: $brand--dark;
 	&:hover {
 		color: white;
@@ -93,10 +90,7 @@
 	font-weight: 700;
 	text-decoration: none;
 	@include rem(font-size, 24px);
-	@include rem(padding, 20px);
-	// border-top: 1px solid rgba($brand--dark, 0.4);
-	// border-bottom: 1px solid rgba($brand--dark, 0.4);
-	// border-left: 1px solid rgba($brand--dark, 0.4);
+	@include rem(padding, 20px);	
 	color: $brand--dark;
 	&:hover {
 		color: white;

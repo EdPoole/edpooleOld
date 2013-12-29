@@ -1,0 +1,18 @@
+.hero--about {
+	background-image: url(img/hero/about.jpg);
+}
+
+.hero--about__title {
+	@include rem(padding, 240px 0 0 0);
+	text-align: center;
+}
+
+.content--page {
+	@extend .g-i;
+	@extend .desktop--three-fifths;
+	@extend .push--desktop--one-fifth;
+	@extend .laptop--three-fifths;
+	@extend .push--laptop--one-fifth;
+	@extend .tablet-landscape--four-fifths;
+	@extend .push--tablet-landscape--one-tenth;
+}

@@ -3,9 +3,11 @@
 body {
 	font-size: 100%;
 	font-family: $family--sans;
+	color: $brand--dark;
 }
 
-.content--post {
+.content--post,
+.content--page {
 
 	color: $brand--dark;
 	@include rem(padding, 40px 0);
