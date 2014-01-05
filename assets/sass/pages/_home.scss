@@ -21,12 +21,73 @@
 	@include rem(padding, 40px 0);
 }
 
-.content--homepage__title {
+.content--lead {
+	@include rem(padding, 40px 0 0 0);
+}
+
+.content--homepage__title {	
 	font-family: $family--serif;
 	text-align: center;
 	font-weight: 400;
-	@include rem(font-size, 36px);
+	text-transform: uppercase;
+	line-height: 1;
+	@include rem(margin-top, 20px);
+	@include rem(font-size, 16px);
+	color: $brand--dark;
+	&:hover {
+		.content--homepage__obvious {			
+			color: darken($brand--dark, 10%);
+		}
+		.content--homepage__transparent {
+			color: rgba($brand--dark, 0.2);
+		}
+	}
+	span {
+		display: block;		
+	}
 }
+
+.content--homepage__obvious {
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+	font-family: $family--serif;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	@include rem(font-size, 68px);
+	@include rem(margin-bottom, 20px);
+	@media only screen and ($media-tablet-portrait) {
+		@include rem(font-size, 48px);
+	}
+	@media only screen and ($media-mobile) {
+		@include rem(font-size, 36px);
+	}
+}
+
+.content--homepage__transparent {
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+	font-family: $family--serif;
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	@include rem(font-size, 68px);	
+	@media only screen and ($media-tablet-portrait) {
+		@include rem(font-size, 48px);
+	}
+	@media only screen and ($media-mobile) {
+		@include rem(font-size, 36px);
+	}
+}
+
+
+
 
 .content--homepage__subtitle {
 	text-align: center;

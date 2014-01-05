@@ -2,8 +2,8 @@
 	@extend .g-i;
 	@extend .desktop--one-quarter;
 	@extend .laptop--one-quarter;
-	@extend .tablet-landscape--one-quarter;
-	@extend .tablet-portrait--one-quarter;
+	@extend .tablet-landscape--one-third;
+	@extend .tablet-portrait--one-half;
 	@include rem(padding, 5px);
 }
 
