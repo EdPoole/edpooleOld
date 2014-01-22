@@ -1,11 +1,23 @@
 
 
 .hero--homepage {
-	background-image: url(img/hero/homepage.jpg);
+	background-image: url(img/hero/homepage-optimised.jpg);
+	padding-top: 20px;
+
+}
+
+.hero--homepage__profile {
+	margin: 0 auto;
+	padding: 5px;
+	background-color: white;
+	border-radius: 50%;
+	width: 140px;
+	height: 140px;
+	margin-top: 140px;
 }
 
 .hero--homepage__title {
-	@include rem(padding, 220px 0 10px 0);
+	@include rem(padding, 10px 0);
 	@include rem(font-size, 36px);
 	text-align: center;
 }
@@ -26,14 +38,16 @@
 }
 
 .content--homepage__title {	
-	font-family: $family--serif;
-	text-align: center;
-	font-weight: 400;
-	text-transform: uppercase;
 	line-height: 1;
 	@include rem(margin-top, 20px);
-	@include rem(font-size, 16px);
 	color: $brand--dark;
+	@extend .g-i;
+	@extend .desktop--three-fifths;
+	@extend .push--desktop--one-fifth;
+	@extend .laptop--three-fifths;
+	@extend .push--laptop--one-fifth;
+	@extend .tablet-landscape--four-fifths;
+	@extend .push--tablet-landscape--one-tenth;
 	&:hover {
 		.content--homepage__obvious {			
 			color: darken($brand--dark, 10%);

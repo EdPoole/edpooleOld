@@ -435,7 +435,7 @@ table {
     .grid {
       padding: 0; } }
 
-.g-i, .portfolio-card, .homepage--updates, .content--homepage__text, .hero--portfolio__content, .hero--portfolio__image, .dribbble-image, .content--article, .content--page, .article--center,
+.g-i, .portfolio-card, .content--homepage__title, .homepage--updates, .content--homepage__text, .hero--portfolio__content, .hero--portfolio__image, .dribbble-image, .content--article, .content--page, .article--center,
 .grid-item {
   display: inline-block;
   vertical-align: top;
@@ -616,7 +616,7 @@ table {
   .tablet-landscape--three-fifths, .tablet-landscape--six-tenths {
     width: 60%; }
 
-  .tablet-landscape--four-fifths, .tablet-landscape--eight-tenths, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .tablet-landscape--four-fifths, .tablet-landscape--eight-tenths, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     width: 80%; }
 
   .tablet-landscape--one-sixth, .tablet-landscape--two-twelfths {
@@ -685,7 +685,7 @@ table {
   .laptop--two-fifths, .laptop--four-tenths {
     width: 40%; }
 
-  .laptop--three-fifths, .laptop--six-tenths, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .laptop--three-fifths, .laptop--six-tenths, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     width: 60%; }
 
   .laptop--four-fifths, .laptop--eight-tenths {
@@ -757,7 +757,7 @@ table {
   .desktop--two-fifths, .desktop--four-tenths {
     width: 40%; }
 
-  .desktop--three-fifths, .desktop--six-tenths, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .desktop--three-fifths, .desktop--six-tenths, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     width: 60%; }
 
   .desktop--four-fifths, .desktop--eight-tenths {
@@ -1064,7 +1064,7 @@ table {
     left: 87.5%;
     position: relative; }
 
-  .push--tablet-landscape--one-tenth, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .push--tablet-landscape--one-tenth, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     left: 10%;
     position: relative; }
 
@@ -1120,7 +1120,7 @@ table {
     left: 75%;
     position: relative; }
 
-  .push--laptop--one-fifth, .push--laptop--two-tenths, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .push--laptop--one-fifth, .push--laptop--two-tenths, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     left: 20%;
     position: relative; }
 
@@ -1216,7 +1216,7 @@ table {
     left: 75%;
     position: relative; }
 
-  .push--desktop--one-fifth, .push--desktop--two-tenths, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
+  .push--desktop--one-fifth, .push--desktop--two-tenths, .content--homepage__title, .homepage--updates, .content--homepage__text, .content--article, .content--page, .article--center {
     left: 20%;
     position: relative; }
 
@@ -1782,6 +1782,13 @@ table {
 img {
   max-width: 100%; }
 
+a {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
 body {
   font-size: 100%;
   font-family: "Whitney A", "Whitney B", helvetica, sans-serif;
@@ -2093,11 +2100,15 @@ footer {
   vertical-align: middle;
   padding: 19px 0;
   padding: 1.1875rem 0; }
-  .site-nav__logo h1 {
+  .site-nav__logo a {
     font-weight: bold;
     font-size: 14px;
     font-size: 0.875rem;
-    line-height: 1; }
+    line-height: 1;
+    text-decoration: none;
+    color: #2f3340; }
+    .site-nav__logo a:hover {
+      color: #147bd7; }
   .site-nav__logo span {
     font-weight: 300; }
 
@@ -2121,16 +2132,18 @@ footer {
     text-decoration: none;
     padding: 19px 10px;
     padding: 1.1875rem 0.625rem;
-    color: white;
     font-weight: 500; }
   .site-nav__links .site-nav__link {
-    display: inline-block; }
+    display: inline-block;
+    color: #2f3340; }
     .site-nav__links .site-nav__link:last-child {
       padding: 19px 0 19px 10px;
       padding: 1.1875rem 0 1.1875rem 0.625rem; }
     @media only screen and (max-width: 480px) {
       .site-nav__links .site-nav__link {
         display: block; } }
+    .site-nav__links .site-nav__link:hover {
+      color: #147bd7; }
 
 .burger-menu {
   display: none; }
@@ -2192,11 +2205,21 @@ footer {
     border: 1px solid #147bd7; }
 
 .hero--homepage {
-  background-image: url(img/hero/homepage.jpg); }
+  background-image: url(img/hero/homepage-optimised.jpg);
+  padding-top: 20px; }
+
+.hero--homepage__profile {
+  margin: 0 auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: 140px; }
 
 .hero--homepage__title {
-  padding: 220px 0 10px 0;
-  padding: 13.75rem 0 0.625rem 0;
+  padding: 10px 0;
+  padding: 0.625rem 0;
   font-size: 36px;
   font-size: 2.25rem;
   text-align: center; }
@@ -2217,15 +2240,9 @@ footer {
   padding: 2.5rem 0 0 0; }
 
 .content--homepage__title {
-  font-family: "Sentinel A", "Sentinel B", helvetica, sans-serif;
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
   line-height: 1;
   margin-top: 20px;
   margin-top: 1.25rem;
-  font-size: 16px;
-  font-size: 1rem;
   color: #2f3340; }
   .content--homepage__title:hover .content--homepage__obvious {
     color: #191c23; }
