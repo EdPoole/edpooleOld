@@ -1,0 +1,50 @@
+.article--center {
+
+	.gist .gist-file {
+		border: none !important;
+		border-radius: 3px !important;
+		@include rem(font-size, 13px);
+		font-family: Monaco, Consolas, "Lucida Console", monospace !important;
+	}
+
+	.gist .gist-file .gist-data .line-pre {
+		font-family: Monaco, Consolas, "Lucida Console", monospace !important;
+	}
+
+	.gist .gist-file .gist-data {
+		border: none !important;
+		background: $brand--dark !important;
+		border-radius: 3px;
+		.line-numbers {
+			background: $brand--dark !important;
+			color: #596D76 !important;
+			border: none !important;
+			border-right: 1px solid #596D76 !important;
+			padding: 10px;
+		}
+	}
+
+	.gist .gist-file .gist-meta {
+		display: none !important;	
+	}
+
+	.gist .gist-file .gist-data .line-data {
+		padding: 10px !important;
+		.line-pre {
+			.k 	{ color: #B294BB !important; }
+			.nf { color: #81A2BE !important; }
+			.p 	{ color: #C5C8C6 !important; }
+			.nv { color: #DE935E !important; }
+			.nd { color: #C5C8C6 !important; }
+			.o 	{ color: #C5C8C6 !important; }
+			.nt { color: #C55D5C !important; }
+			.cm { color: #54707E !important; }
+			.nn { color: #C55D5C !important; }
+			.err { color: #C55D5C !important; background-color: $brand--dark !important; }
+			.no { color: #DE935E !important; }
+			.n { color: #DE935E !important; }
+			.mi { color: #C55D5C !important; }
+			.kt { color: #C55D5C !important; }
+		}
+	}
+}

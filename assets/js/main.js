@@ -21,6 +21,18 @@ $(function() {
 		}
 	});
 
+	$('#contact').click(function(e) {
+		e.preventDefault();
+		$('html').addClass('modal--perspective');
+		$('.modal--effect').addClass('modal--show');
+	});
+
+
+	$('.modal--close').click(function(e) {
+		e.preventDefault();
+		$('html').removeClass('modal--perspective');
+		$('.modal--effect').removeClass('modal--show');
+	});
 
 	$.ajax({
 		type: 'GET',
@@ -31,10 +43,10 @@ $(function() {
 				dribbbleTitle[i] = data.shots[i].title;
 				dribbbleImage[i] = data.shots[i].image_url;
 				dribbbleUrls[i] = data.shots[i].url;
-				console.log(dribbbleTitle[i]);
-				console.log(dribbbleImage[i]);
-				console.log(dribbbleUrls[i]);
-			});		
+				// console.log(dribbbleTitle[i]);
+				// console.log(dribbbleImage[i]);
+				// console.log(dribbbleUrls[i]);
+			});
 			buildDisplay();
 		}
 	});

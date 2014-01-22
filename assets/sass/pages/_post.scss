@@ -4,6 +4,7 @@
 .hero--article__title {
 	@include rem(padding, 210px 0 0 0);
 	@include rem(font-size, 36px);
+	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
 	@media only screen and ($media-mobile) {
 		@include rem(padding, 170px 0 0 0);
 	}
@@ -14,11 +15,13 @@
 	@include rem(padding, 5px 0 0 0);
 	font-weight: 300;
 	font-style: italic;
+	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
 }
 
 .hero--article__date {
 	@include rem(padding, 20px 0 0 0);
 	text-transform: uppercase;
+	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
 }
 
 

@@ -1,27 +1,27 @@
 {% include header.html %}
-<section class="site-nav">
-	{% include navigation.html %}
-</section>
+{% include contact.html %}
+<div class="container-for-modal">
+	<section class="site-nav">
+		{% include navigation.html %}
+	</section>
 
-<section class="hero hero--article" style="background-image: url(/assets/img/articles/{{page.cover}})">
-	<div class="g">
-		<div class="article--center">
-			<h1 class="hero--article__title">{{page.title}}</h1>
-			<h2 class="hero--article__subtitle">{{page.extract}}</h2>
-			<h6 class="hero--article__date">{{ page.date | date: "%B %d, %Y" }}</h6>
+	<section class="hero hero--article" style="background-image: url(/assets/img/articles/{{page.cover}})">
+		<div class="g">
+			<div class="article--center">
+				<h1 class="hero--article__title animated fadeInDown">{{page.title}}</h1>
+				<h2 class="hero--article__subtitle animated fadeInDown">{{page.extract}}</h2>
+				<h6 class="hero--article__date animated fadeInDown">{{ page.date | date: "%B %d, %Y" }}</h6>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="content content--post">
-	<div class="g">
-		<article class="article--center">
-			{{content}}
-		</article>
-	</div>
-</section>
+	<section class="content content--post">
+		<div class="g">
+			<article class="article--center">
+				{{content}}
+			</article>
+		</div>
+	</section>
 
-{% include footer.html %}
-
-
-
+	{% include footer.html %}
+</div>

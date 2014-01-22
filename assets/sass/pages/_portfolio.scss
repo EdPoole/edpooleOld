@@ -2,6 +2,7 @@
 
 .hero--portfolio {
 	background-image: url(img/hero/portfolio.jpg);
+	overflow: hidden;
 }
 
 .hero--portfolio__title {
@@ -17,14 +18,16 @@
 	@extend .desktop--one-half;
 	@extend .laptop--one-half;
 	@extend .tablet-landscape--one-half;
+	@extend .tablet-portrait--one-half;
 	height: 500px;	
 }
 
-.hero--portfolio__image {
+.hero--portfolio__images {
 	@extend .g-i;
 	@extend .desktop--one-half;
 	@extend .laptop--one-half;
 	@extend .tablet-landscape--one-half;
+	@extend .tablet-portrait--one-half;
 	position: relative;
 	height: 500px;	
 	img {
@@ -33,17 +36,48 @@
 		position: absolute;
 		margin-left: 60px;
 		@media only screen and ($media-laptop) {
-			width: 420px;
+			margin-left: 30px;
 		}
+	}
+	@media only screen and ($media-tablet-landscape) {
+		display: none;
+	}
+	@media only screen and ($media-tablet-portrait) {
+		display: none;
+	}
+	@media only screen and ($media-mobile) {
+		display: none;
+	}
+}
+
+.hero--portfolio__image {
+	@extend .g-i;
+	@extend .desktop--one-half;
+	@extend .laptop--one-half;
+	@extend .tablet-landscape--one-half;
+	@extend .tablet-portrait--one-half;
+	position: relative;
+	height: 500px;
+	img {
+		width: 290px;
+		bottom: 0;
+		position: absolute;
+		margin-left: 140px;		
 		@media only screen and ($media-tablet-landscape) {
-			width: 320px;
+			margin-left: 80px;
 		}
 		@media only screen and ($media-tablet-portrait) {
-			display: none;
+			margin-left: 30px;
 		}
 		@media only screen and ($media-mobile) {
 			display: none;
 		}
+	}
+	@media only screen and ($media-desktop) {
+		display: none;
+	}
+	@media only screen and ($media-laptop) {
+		display: none;
 	}
 }
 

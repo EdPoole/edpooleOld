@@ -18,24 +18,32 @@
 		background-color: white;
 		a {
 			color: $brand--dark;
+			&:hover {
+				// color: $brand--dark;
+			}
 		}
 	}
 	.burger-menu {
 		color: $brand--dark;
 	}
+	.site-nav__logo {
+		a {
+			color: $brand--dark;
+		}		
+	}	
 }
 
 .site-nav__logo {	
 	text-transform: uppercase;
 	display: inline-block;
 	vertical-align: middle;
-	@include rem(padding, 19px 0);
+	@include rem(padding, 19px 0);	
 	a {
 		font-weight: bold;
 		@include rem(font-size, 14px);
 		line-height: 1;
 		text-decoration: none;
-		color: $brand--dark;
+		color: white;		
 		&:hover {
 			color: $brand;
 		}
@@ -73,7 +81,7 @@
 		@media only screen and ($media-mobile) {
 			display: block;			
 		}
-		color: $brand--dark;
+		color: white;	
 		&:hover {
 			color: $brand;
 		}

@@ -1,0 +1,138 @@
+.modal--perspective,
+.modal--perspective body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.modal--perspective body  {
+	background: darken($brand--dark, 10%);
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
+}
+
+.container-for-modal {
+	min-height: 100%;
+	background-color: white;	
+}
+
+.modal--perspective .container-for-modal {
+	box-shadow: 0 0 50px 8px rgba(0, 0, 0, 0.6);
+}
+
+.modal--contact {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);	
+}
+
+.modal--show {
+	visibility: visible;
+}
+
+.modal--overlay {	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.modal--show ~ .modal--overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.modal--show.modal--effect ~ .container-for-modal {
+	height: 100%;
+	overflow: hidden;
+}
+
+.modal--show.modal--effect ~ .modal--overlay {
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.modal--show.modal--effect ~ .container-for-modal,
+.modal--show.modal--effect ~ .modal--overlay {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-animation: rotateRightSideFirst 0.5s forwards ease-in;
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 50%;
+	-moz-animation: rotateRightSideFirst 0.5s forwards ease-in;
+	transform-style: preserve-3d;
+	transform-origin: 0% 50%;
+	animation: rotateRightSideFirst 0.5s forwards ease-in;
+}
+
+@-webkit-keyframes rotateRightSideFirst {
+	50% { -webkit-transform: translateZ(-50px) rotateY(5deg); -webkit-animation-timing-function: ease-out; }
+	100% { -webkit-transform: translateZ(-200px); }
+}
+
+@-moz-keyframes rotateRightSideFirst {
+	50% { -moz-transform: translateZ(-50px) rotateY(5deg); -moz-animation-timing-function: ease-out; }
+	100% { -moz-transform: translateZ(-200px); }
+}
+
+@keyframes rotateRightSideFirst {
+	50% { transform: translateZ(-50px) rotateY(5deg); animation-timing-function: ease-out; }
+	100% { transform: translateZ(-200px); }
+}
+
+.modal--effect .modal--content {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	transform: translateX(200%);
+	opacity: 0;
+}
+
+.modal--show.modal--effect .modal--content {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+	opacity: 1;
+	-webkit-transition: all 0.5s 0.1s;
+	-moz-transition: all 0.5s 0.1s;
+	transition: all 0.5s 0.1s;
+	background-color: $brand--dark;
+	padding: 20px;
+	color: white;
+	position: relative;
+	box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.6);
+}
+
+.modal--close {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	color: white;
+	top: -5px;
+	right: -5px;
+}
