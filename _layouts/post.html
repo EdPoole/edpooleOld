@@ -1,32 +1,32 @@
----
-layout: default
----
-<a href="" class="focus toggle">FOCUS</a>
-    <img style="max-height: 500px; margin: 0 auto; display: block" src="/images/{{page.cover}}" alt=""> 
-<section class="wrapper blogroll">
-<article class="blog-roll blog-post">    
-    <div class="post-content">
-        <h2 class="post-date zeta">{{ page.date | date: "%B %d, %Y" }}</h2>
-        <h1 class="post-title">{{page.title}}</h1>        
-        <h3 class="extract">{{page.extract}}</h3>
-        {{content}}
-    </div>
-    <div class="comments">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'inactiveartistblog'; // required: replace example with your forum shortname
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-    <a class="comments-toggle show-toggle">Comments</a>
-</article>
+{% include header.html %}
+{% include contact.html %}
+<div class="container-for-modal">
+	<section class="site-nav--mobile">
+		{% include navigation--mobile.html %}
+	</section>
+	<section class="site-nav">		
+		{% include navigation.html %}
+	</section>
 
-</section>
+	<section class="hero hero--article" style="background-image: url(/assets/img/articles/{{page.cover}})">
+		<div class="g mobile--hero-click">
+			<div class="article--center">
+				<h1 class="hero--article__title animated fadeInDown">{{page.title}}</h1>
+				<h2 class="hero--article__subtitle animated fadeInDown">{{page.extract}}</h2>
+				<h6 class="hero--article__date animated fadeInDown">{{ page.date | date: "%B %d, %Y" }}</h6>				
+			</div>
+		</div>
+		<a class="hero--article__toggle" href="#">click</a>
+		<div class="hero--article__overlay"></div>
+	</section>
+
+	<section class="content content--post">
+		<div class="g">
+			<article class="article--center">
+				{{content}}
+			</article>
+		</div>
+	</section>
+
+	{% include footer.html %}
+</div>

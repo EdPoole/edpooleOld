@@ -1,0 +1,198 @@
+// .hero--about {
+// 	background-image: url(img/hero/about.jpg);
+// }
+
+.content--about-hero {
+	@include rem(padding, 100px 0 20px 0);
+}
+
+.hero--about__title {
+	text-align: center;
+	font-family: $family--serif;
+	@include rem(font-size, 60px);
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+
+@keyframes pulsate {
+	0% {
+		transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+}
+@-moz-keyframes pulsate {
+	0% {
+		-moz-transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-moz-transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+}
+
+
+.map--container {
+	position: relative;
+	// height: 100px;
+	.map--pin {
+		background: #FB6551;
+		border-radius: 50%;
+		height: 14px;
+		width: 14px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		&:before {
+			content: "";
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			position: absolute;
+			margin: -13px 0 0 -13px;
+			-webkit-animation: pulsate 2s ease-out infinite;
+			-moz-animation: pulsate 2s ease-out infinite;
+			animation: pulsate 2s ease-out infinite;
+			opacity: 0;
+			box-shadow: 0 0 1px 2px #FB6551;
+			-webkit-animation-delay: 1.3s;
+			-moz-animation-delay: 1.3s;
+			animation-delay: 1.3s;
+		}
+		&:after {
+			content: "";
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			position: absolute;
+			margin: -13px 0 0 -13px;
+			-webkit-animation: pulsate 2s ease-out infinite;
+			-moz-animation: pulsate 2s ease-out infinite;
+			animation: pulsate 2s ease-out infinite;
+			opacity: 0;
+			box-shadow: 0 0 1px 2px #FB6551;
+			-webkit-animation-delay: 0.8s;
+			-moz-animation-delay: 0.8s;
+			animation-delay: 0.8s;
+		}
+	}
+}
+
+.content--page {
+	.g > * {
+		@extend .g-i;
+		@extend .desktop--three-fifths;
+		@extend .push--desktop--one-fifth;
+		@extend .laptop--three-fifths;
+		@extend .push--laptop--one-fifth;
+		@extend .tablet-landscape--four-fifths;
+		@extend .push--tablet-landscape--one-tenth;
+	}
+
+	.colophon--title {
+		margin: 0;
+	}
+
+	.swatch {
+		width: 33%;
+		display: inline-block;
+		padding: 10px;
+		text-align: center;
+		@media only screen and ($media-mobile) {
+			width: 100%;
+		}
+		h4 {
+			font-size: 14px;			
+			font-weight: bold;
+			margin: 10px 0 0 0;
+		}
+		.swatch-colour {
+			width: 100%;
+			border-radius: 5px;
+			padding: 10px;
+			font-weight: 300;		
+		}
+		.swatch--brand {
+			background-color: $brand;
+			border: 1px solid $brand;
+			color: white;
+		}
+		.swatch--brand-dark {
+			background-color: $brand--dark;
+			border: 1px solid $brand--dark;
+			color: white;
+		}
+		.swatch--white {
+			background-color: white;
+			border: 1px solid #ECECEC;
+		}
+	}
+	.fonts-swatch {
+		.font-sample {
+			width: 50%;
+			display: inline-block;
+			text-align: center;
+			.font-sample--info {
+				@include rem(font-size, 16px);
+				margin: 10px 0;
+				font-weight: bold;
+			}		
+			.font-sample--serif {
+				border-radius: 5px;
+				font-weight: bold;
+				text-align: center;
+				font-family: $family--serif;
+				border: 1px solid #ECECEC;
+				@include rem(font-size, 16px);
+				@include rem(padding, 10px 0);
+				margin: 0 10px;
+			}
+			.font-sample--sans {
+				border-radius: 5px;
+				font-weight: bold;
+				text-align: center;
+				font-family: $family--sans;
+				border: 1px solid #ECECEC;
+				@include rem(font-size, 16px);
+				@include rem(padding, 10px 0);
+				margin: 0 10px;
+			}
+			@media only screen and ($media-mobile) {
+				width: 100%;
+			}
+		}
+	}
+}

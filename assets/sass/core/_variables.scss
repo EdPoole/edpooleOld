@@ -1,0 +1,45 @@
+/* ================================ */
+/*			Media Queries
+/* ================================ */
+
+// Breakpoints
+
+$laptop:           1200px;
+$tablet-landscape: 1024px;
+$tablet-portrait:  768px;
+$mobile:           480px;
+
+
+
+$laptop-end: $laptop + 1;
+$tablet-landscape-end: $tablet-landscape + 1;
+$tablet-portrait-end: $tablet-portrait + 1;
+$mobile-end: $mobile + 1;
+
+// media-queries
+
+$breakpoints: (
+	'mobile' '(max-width: ' + $mobile + ')',
+	'tablet-portrait' '(min-width: ' + $mobile-end + ') and (max-width:' + $tablet-portrait + ')',
+	'tablet-landscape' '(min-width: ' + $tablet-portrait-end + ') and (max-width:' + $tablet-landscape + ')',
+	'laptop' '(min-width: ' + $tablet-landscape-end + ') and (max-width:' + $laptop + ')',
+	'desktop' '(min-width: ' + $laptop-end + ')'
+);
+
+$media-desktop:	'min-width: ' + $laptop-end;
+$media-laptop:	'min-width: ' + $tablet-landscape-end + ') and (max-width:' + $laptop;
+$media-tablet-landscape:	'min-width: ' + $tablet-portrait-end + ') and (max-width:' + $tablet-landscape;
+$media-tablet-portrait:	'min-width: ' + $mobile-end + ') and (max-width:' + $tablet-portrait;
+$media-mobile:	'max-width: ' + $mobile;
+
+
+// colours
+
+$brand: #147BD7;
+$brand--dark: #2F3340;
+
+// Fonts
+
+$family--serif: 'Sentinel A', 'Sentinel B', helvetica, sans-serif;
+$family--sans: 'Whitney A', 'Whitney B', helvetica, sans-serif;
+

@@ -1,18 +1,12 @@
----
-layout: portfolio
----
-
-<section class="wrapper blogroll">
-
-<article class="blog-roll blog-post">
-    <div class="blog-image-wrap">
-        <img src="/images/{{page.cover}}" alt=""> 
-    </div>
-    <div class="post-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.extract}}</h3>
-        {{content}}
-    </div>
-</article>
-
-</section>
+{% include header.html %}
+{% include contact.html %}
+<div class="container-for-modal">
+	<section class="site-nav--mobile site-nav--page">
+		{% include navigation--mobile.html %}
+	</section>
+	<section class="site-nav site-nav--page">
+		{% include navigation.html %}
+	</section>
+	{{content}}
+	{% include footer.html %}
+</div>

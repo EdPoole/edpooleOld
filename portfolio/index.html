@@ -1,138 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Portfolio | Ed Poole</title>
-	<link rel="stylesheet" href="/stylesheets/screen.css">
-	<link rel="dns-prefetch" href="//use.typekit.net">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" href="/icon.png">
-    <link rel="apple-touch-icon-precomposed" href="/icon.png">
-    <meta name="apple-mobile-web-app-title" content="edpoole.me">
-    <meta name="description" content="Designer and front end developer writing mostly about CSS and design.">
-    <script type="text/javascript" src="//use.typekit.net/lri1knn.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
-<body>
-	<header class="focus-mode wrapper cf">
-		<a class="site-title" href="/">Ed Poole</a>
-		<nav class="site-nav">
-			<a href="/">Articles</a>
-			<a class="active" href="/portfolio/">Portfolio</a>
-			<a href="/about/">About</a>
-		</nav>
-	</header>
-	<section class="wrapper blogroll">
-		
-		<article class="blog-roll cf">
-			<div class="blog-info-wrap">
-				<h1 class="post-title align-center">Welcome to my portfolio.</h1>
-<!-- 				<p class="post-extract align-center">Coming soon...</p> -->
-			</div>
-		</article>
+---
+layout: page
+---
 
-	</section>
-	<div class="portfolio-row layerstyles">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-content">				
-				<p class="portfolio-paragraph">A blog for all things related to design, development and web creativity. New content is published weekly. Coming September.</p>				
-			</div><div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://layerstyl.es">Layerstyles</a></h2>
-			</div>			
+
+<section class="hero hero--portfolio">
+	<div class="g">
+		<div class="hero--portfolio__content">
+			<h1 class="hero--portfolio__title animated fadeInLeft">Latest Projects</h1>
+			<h2 class="hero--portfolio__subtitle animated fadeInLeft">UX and UI Design</h2>
+			<p class="hero--portfolio__paragraph animated fadeInLeft">Here you will find a collection of <a href="http://dribbble.com/edpoole">Dribbble shots</a>, <a href="http://github.com/edpoole">Github Repos</a>, and projects I have created or been apart of.</p>
+		</div><div class="hero--portfolio__image">
+			<img class="animated fadeInUp" src="/assets/img/hero/portfolio--phone.png" alt="">
+		</div><div class="hero--portfolio__images">
+			<img class="animated fadeInUp" src="/assets/img/hero/portfolio--phones.png" alt="">
 		</div>
 	</div>
-	<div class="portfolio-row mdnotes">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://mdnot.es">Markdown Notes</a></h2>
-			</div><div class="portfolio-content">				
-				<p class="portfolio-paragraph">Markdown Notes is a simple web app for creating content in Markdown. Manage your files and Sync with both dropbox and Github. Coming Soon.</p>		
-			</div>			
+</section>
+
+<section class="content content--portfolio">
+	<div class="g">
+		<h2 class="content--portfolio__header">Projects</h2>
+		<div class="content--portfolio__projects--container">
+			<div class="portfolio-card">
+				{% include portfolio/just-delete-me.html %}
+			</div><div class="portfolio-card">
+				{% include portfolio/one-liner-commits.html %}
+			</div><div class="portfolio-card">
+				{% include portfolio/print-posters.html %}
+			</div><!-- <div class="portfolio-card">
+			{% include portfolio/2013-in-review.html %}
+			</div> -->
+		</div>
+	</div>
+	<div class="g content--portfolio__dribbble">
+		<h2 class="content--portfolio__header">Dribbble Shots</h2>
+		<div class="content--portfolio__dribbble--container">
+			
 		</div>
 	</div>	
-	<div class="portfolio-row css-colours">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-content">				
-				<p class="portfolio-paragraph">Did you know there's 147 named colours in the CSS Spec? Neither did I until I decided one bored afternoon to write them all out.</p>				
-			</div><div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://demo.edpoole.me/css-colors">CSS Colours</a></h2>
-			</div>			
-		</div>
-	</div>
-	<div class="portfolio-row one-liner-commits">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://demo.edpoole.me/one-liner-commits">One Liner Commits</a></h2>
-			</div><div class="portfolio-content">		
-				<p class="portfolio-paragraph">You love git, and you love jokes. So why not combine them? One-liner commits will randomly select a one-liner joke and add it to your commit message.</p>				
-			</div>			
-		</div>
-	</div>	
-	<div class="portfolio-row graphic-design">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-content">				
-				<p class="portfolio-paragraph">In my spare time, I also create an array of different graphics. These range all the way from forum signatures, all the way through to A3 print posters.</p>				
-			</div><div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://edpoole.me/portfolio/graphic-design/">Graphic Design</a></h2>
-			</div>			
-		</div>
-	</div>
-	<div class="portfolio-row just-delete-me">
-		<div class="portfolio-content-wrapper">
-			<div class="portfolio-image">
-				<h2 class="portfolio-heading"><a href="http://justdelete.me">Just<span>delete</span>.me</a></h2>
-			</div><div class="portfolio-content">
-				<p class="portfolio-paragraph">Just Delete Me is a directory of urls to delete your account from web services. Created by <a href="http://robblewis.me">Robb Lewis</a>, I lent my skills to spruce up the design.</p>
-				<p class="portfolio-paragraph">Update: We have now been featured in <a class="wired-link" href="http://www.wired.com/gadgetlab/2013/08/just-delete-me/">Wired</a></p>
-			</div>			
-		</div>
-	</div>	
-	<div class="feed-container">
-		
-	</div>
-	<!-- <section class="wrapper blogroll">
+</section>
 
-		<article class="blog-roll cf">
-			<div class="blog-image-wrap">
-				<img src="/images/badcsscolors.jpg" alt="">
-			</div>
-			<div class="blog-info-wrap">
-				<h1 class="post-title"><a href="/projects/badcsscolors/">Bad CSS Colors.</a></h1>
-				<p class="post-extract">One of my many joke websites. Bad CSS colors is a small site I created to show off all the pre-defined colours in the CSS Spec.</p>
-			</div>
-		</article>
-
-
-		<article class="blog-roll cf">
-			<div class="blog-image-wrap">
-				<img src="/images/markdown.jpg" alt="">
-			</div>
-			<div class="blog-info-wrap">
-				<h1 class="post-title"><a href="/projects/mdstylesheet">Markdown Stylesheet.</a></h1>
-				<p class="post-extract">A small stylesheet I created for markdown, ready for you to drop into any compiled markdown file you may have.</p>
-			</div>
-		</article> -->
-
-		<!-- TEMPLATE -->
-		<!-- <article class="blog-roll cf">
-			<div class="blog-image-wrap">
-				<img src="" alt="">
-			</div>
-			<div class="blog-info-wrap">
-				<h1 class="post-title epsilon"><a href=""></a></h1>
-				<p class="milli post-extract"></p>
-			</div>
-		</article> -->
-
-
-<!-- 	</section> -->
-	<footer class="focus-mode wrapper">
-		<p class="milli footer-top">&copy; Ed Poole 2013.</p> 
-		<p class="milli"><a href="http://twitter.com/_ewp">Twitter</a> | <a href="http://github.com/edpoole">Github</a> | <a href="http://dribbble.com/edpoole">Dribbble</a></p>
-	</footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="/javascripts/scripts.min.js"></script>
-<script type="text/javascript">var GoSquared = {};GoSquared.acct = "GSN-092357-O";(function(w){function gs(){w._gstc_lt = +new Date;var d = document, g = d.createElement("script");g.type = "text/javascript";g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);} w.addEventListener ? w.addEventListener("load", gs, false) : w.attachEvent("onload", gs); })(window);
-</script>
-</body>
-</html>
+<section class="homepage-tabs">
+	<a href="http://dribbble.com/edpoole" class="homepage-tabs__dribbble">
+		<h4>Visit my Profile</h4>
+		<h1>Dribbble</h1>
+	</a>
+	<a href="http://github.com/edpoole" class="homepage-tabs__github">
+		<h4>Visit my Profile</h4>
+		<h1>GitHub</h1>
+	</a>
+</section>

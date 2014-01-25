@@ -5,4 +5,7 @@ rdiscount:
     extensions: [smart]
 pygments: true
 permalink: /articles/:title
+paginate_path: 'articles/:num'
 paginate: 5
+baseurl: /
+exclude: [node_modules]
