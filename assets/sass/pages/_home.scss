@@ -20,6 +20,7 @@
 	@include rem(padding, 10px 0);
 	@include rem(font-size, 36px);
 	text-align: center;
+	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
 }
 
 .hero--homepage__subtitle {
@@ -27,6 +28,7 @@
 	font-weight: 100;
 	font-style: italic;
 	@include rem(font-size, 20px);	
+	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
 }
 
 .content--homepage {

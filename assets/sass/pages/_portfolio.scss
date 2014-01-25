@@ -19,7 +19,10 @@
 	@extend .laptop--one-half;
 	@extend .tablet-landscape--one-half;
 	@extend .tablet-portrait--one-half;
-	height: 500px;	
+	height: 500px;
+	@media only screen and ($media-mobile) {
+		height: 447px;
+	}
 }
 
 .hero--portfolio__images {

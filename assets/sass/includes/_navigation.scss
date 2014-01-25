@@ -11,6 +11,18 @@
 	}
 }
 
+.site-nav--mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	@media only screen and ($media-mobile) {
+		display: block;
+		z-index: 5;
+	}
+}
+
 .site-nav--page { // White background on non-blogpost pages
 	background-color: white;
 	color: $brand--dark;
@@ -29,7 +41,7 @@
 	.site-nav__logo {
 		a {
 			color: $brand--dark;
-		}		
+		}	
 	}	
 }
 
@@ -37,7 +49,15 @@
 	text-transform: uppercase;
 	display: inline-block;
 	vertical-align: middle;
-	@include rem(padding, 19px 0);	
+	@include rem(padding, 19px 0);
+	@media only screen and ($media-mobile) {
+		display: none;
+	}
+	&.site-nav__logo-mobile {
+		@media only screen and ($media-mobile) {
+			display: inline-block;
+		}	
+	}
 	a {
 		font-weight: bold;
 		@include rem(font-size, 14px);
@@ -77,6 +97,10 @@
 		display: inline-block;
 		&:last-child {
 			@include rem(padding, 19px 0 19px 10px);
+			@media only screen and ($media-mobile) {
+				display: block;
+				@include rem(padding, 19px 10px);
+			}
 		}
 		@media only screen and ($media-mobile) {
 			display: block;			

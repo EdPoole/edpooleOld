@@ -28,6 +28,11 @@ $(function() {
 	});
 
 
+	$('.hero--article__toggle').click(function(e) {
+		e.preventDefault();
+		$('.hero--article__overlay').toggleClass('overlay--invisible');
+	})
+
 	$('.modal--close').click(function(e) {
 		e.preventDefault();
 		$('html').removeClass('modal--perspective');

@@ -1,0 +1,198 @@
+.wrapper--cv {
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+.content--cv-hero {
+	@include rem(padding, 100px 0 40px 0);
+}
+
+
+.hero--cv__title {
+	text-align: center;
+	font-family: $family--serif;
+	@include rem(font-size, 60px);
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	@media only screen and ($media-mobile) {
+		@include rem(font-size, 44px);
+	}
+}
+
+.hero--cv__subtitle-connector {
+	text-transform: uppercase;
+	margin: 15px 0 10px 0;
+	text-align: center;
+	@include rem(font-size, 16px);
+	line-height: 1;
+}
+
+.hero--cv__subtitle {
+	text-align: center;
+	font-family: $family--serif;
+	@include rem(font-size, 60px);
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.hero--cv__date {
+	text-align: center;
+	font-family: $family--serif;
+	font-weight: 400;
+	@include rem(font-size, 14px);
+	font-style: italic;
+	@include rem(margin, 20px 0 0 0);
+}
+
+.hero--cv__metadata {
+	text-align: center;
+	font-family: $family--serif;
+	font-weight: 400;
+	@include rem(font-size, 14px);	
+	@include rem(margin, 5px 0 0 0);
+	// font-style: italic;
+	&.hero--cv__metadata-first {
+		margin-top: 30px;
+	}
+	strong {
+		margin-left: 5px;
+		font-style: normal;
+	}
+}
+
+
+.content--page {
+
+	.content--cv__skill-row {
+		margin: 0;
+		padding: 0;
+		.content--cv__skill {
+			margin: 5px 0;
+			span {
+				border: 1px solid #ECECEC;
+				border-radius: 5px;
+				padding: 5px 0;
+				text-align: center;
+				@include rem(font-size, 16px);
+				width: 100%;
+				display: block;
+				font-weight: bold;
+			}
+			width: 33%;
+			display: inline-block;
+			padding: 0 5px;
+			@media only screen and ($media-mobile) {
+				width: 100%;
+			}
+			&:first-child {
+				padding-left: 0;				
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			@media only screen and ($media-mobile) {
+				padding: 0;
+			}
+		}
+	}
+
+	&.content--page__cv {
+		padding: 0;
+	}
+
+	.cv--fancy-divider {
+		border: none;
+		border-top: 1px solid #96989F;
+		position: relative;
+		margin: 50px 0;
+		&:before {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background-color: #96989F;
+			position: absolute;
+			left: 50%;
+			border-radius: 50%;
+			margin: -5px 0 0 10px;
+		}
+		&:after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background-color: #96989F;
+			position: absolute;
+			left: 50%;
+			border-radius: 50%;
+			margin: -5px 0 0 -10px;
+		}
+	}
+
+	.content--cv__title {
+		font-family: $family--sans;
+		@include rem(font-size, 18px);
+		text-transform: uppercase;
+		// text-align: center;
+		margin: 0 0 10px 0;
+	}
+
+	.content--cv__intro {
+		@include rem(font-size, 16px);
+		margin: 5px 0;
+		text-align: justify;
+		a {
+			color: $brand;
+			text-decoration: none;
+			font-weight: 300;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.content--page__cv-half {
+		@extend .g-i;
+		@extend .desktop--three-tenths;		
+		@extend .laptop--three-tenths;		
+		@extend .tablet-landscape--four-tenths;		
+		@include rem(padding, 0 0 0 10px);
+		&.content--push {
+			@extend .push--desktop--one-fifth;
+			@extend .push--laptop--one-fifth;
+			@extend .push--tablet-landscape--one-tenth;
+			@include rem(padding, 0 10px 0 0);
+			@media only screen and ($media-mobile) {
+				margin: 0;
+			}
+		}
+		@media only screen and ($media-mobile) {
+			padding: 10px 0;
+			margin-top: 10px;
+		}
+	}
+
+	.content--cv__info {
+		p {
+			margin: 0;
+			@include rem(font-size, 16px);
+		}
+		h5 {
+			@include rem(font-size, 16px);
+			margin: 20px 0 5px 0;
+		}		
+	}
+	.content--cv__info-divider {
+		border: none;
+		border-top: 1px solid rgba($brand--dark, 0.4);
+		margin: 10px 0;
+	}
+
+	.content--cv__divider {
+		border: none;
+		border-top: 1px solid rgba($brand--dark, 0.4);
+		margin: 10px 0;
+	}
+}
