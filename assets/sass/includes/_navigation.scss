@@ -48,6 +48,7 @@
 .site-nav__logo {	
 	text-transform: uppercase;
 	display: inline-block;
+	float: left;
 	vertical-align: middle;
 	@include rem(padding, 19px 0);
 	@media only screen and ($media-mobile) {
@@ -56,6 +57,7 @@
 	&.site-nav__logo-mobile {
 		@media only screen and ($media-mobile) {
 			display: inline-block;
+			float: left;
 		}	
 	}
 	a {
