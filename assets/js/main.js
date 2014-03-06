@@ -62,4 +62,12 @@ $(function() {
 		}
 	}
 
+	var windowHeight = window.innerHeight - 56;
+	console.log(windowHeight);
+	$('.hero--homepage').css('height', windowHeight);
+
+	window.resize = function() {
+		
+	};
+
 });

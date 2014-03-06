@@ -1,15 +1,17 @@
 
 
 .hero--homepage {
-	background-image: url(img/hero/homepage-optimised.jpg);
+	// background-image: url(img/hero/homepage-optimised.jpg);
+	background: #475791;
+	background: radial-gradient(circle farthest-side at right bottom, #cdede8 10%, #89BEB6 20%, #68B4B2 30%, #2498AF 65%, #475791 100%);
 	padding-top: 20px;
-
+	
 }
 
 .hero--homepage__profile {
 	margin: 0 auto;
-	padding: 5px;
-	background-color: white;
+	padding: 3px;
+	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 50%;
 	width: 140px;
 	height: 140px;
@@ -20,15 +22,19 @@
 	@include rem(padding, 10px 0);
 	@include rem(font-size, 36px);
 	text-align: center;
-	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
+	font-weight: 400;
+	text-shadow: 0px 1px 1px rgba($brand--dark, 0.2);
 }
 
 .hero--homepage__subtitle {
 	text-align: center;
-	font-weight: 100;
-	font-style: italic;
+	font-weight: 400;
 	@include rem(font-size, 20px);	
-	text-shadow: 2px 2px 3px rgba($brand--dark, 0.8);
+	text-shadow: 0px 1px 1px rgba($brand--dark, 0.2);
+	color: #CDEDE8;
+	background: -webkit-linear-gradient(0, #cbd4f5 0%, #dcf2ef 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .content--homepage {
