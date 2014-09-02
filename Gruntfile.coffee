@@ -12,10 +12,12 @@ module.exports = (grunt) ->
         files: 
           ['assets/css/main.css' : 'assets/css/source/main.scss'];
       
-    autoprefixer:
-      options:
-        browsers: ['last 10 version']
-        src: 'assets/css/main.css'
+    autoprefixer:        
+      single_file:
+        options:
+          browsers: ['last 10 version']
+        src: 'assets/css/main.css',
+        dest: 'assets/css/main.css'    
 
     watch:
       files: ['assets/css/source/*.scss']
@@ -28,4 +30,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-autoprefixer'
 
-  grunt.registerTask 'default', ['sass', 'watch']
+  grunt.registerTask 'default', ['sass', 'autoprefixer', 'watch']
