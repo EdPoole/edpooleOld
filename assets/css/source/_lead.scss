@@ -1,0 +1,23 @@
+
+
+.lead {
+	&--home {
+		max-width: $site__width;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		&__title {
+			width: 50%;
+			font-family: $family--serif;
+		}
+		&__subtitle {
+			width: 50%;
+			font-family: $family--sans;
+		}
+		&__copy {
+			width: 50%;
+			font-family: $family--sans;
+		}
+	}
+}
