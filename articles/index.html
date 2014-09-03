@@ -1,0 +1,28 @@
+---
+layout: page
+---
+
+<h1 class="page__title">Articles</h1>
+
+<div class="post__container">
+	{% for post in paginator.posts %}
+	<a href="{{post.url}}" class="post__list__link">
+		<h2 class="post__list__date">{{ post.date | date: "%B %d, %Y" }}</h2>
+		<h1 class="post__list__title">{{post.title}}</h1>
+		<p class="post__list__excerpt">{{post.extract}}</p>	
+	</a>
+	{% endfor %}
+
+	<div class="content content--pagination">
+		{% if paginator.previous_page %}		
+			{% if paginator.previous_page == 1 %}
+				<a href="/articles/" class="content--pagination__previous">Newer Posts</a>
+			{% else %}
+				<a href="/articles/{{paginator.previous_page}}" class="content--pagination__previous">Newer Posts</a>
+			{% endif %}
+		{% endif %}
+		{% if paginator.next_page %}
+			<a href="/articles/{{paginator.next_page}}" class="content--pagination__next">Older Posts</a>
+		{% endif %}
+	</div>
+</div>

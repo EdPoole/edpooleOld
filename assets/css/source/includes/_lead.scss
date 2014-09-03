@@ -20,7 +20,8 @@
 			@media only screen and ($media-tablet-landscape) { width: 70%; }
 			@media only screen and ($media-laptop) { width: 60%; }
 			@media only screen and ($media-desktop) { width: 50%; }			
-			font-size: 28px;
+			font-size: 42px;
+			font-family: $family--serif;
 			margin: 0;
 			padding-bottom: 8px;
 			font-weight: 100;
@@ -40,19 +41,22 @@
 			font-weight: 300;
 			margin: 0;
 			padding: 0 0 10px 0;
+			letter-spacing: 2px;
+			color: rgba(255, 255, 255, 0.8);
 		}
 		&__copy {
 			width: 100%;
-			@media only screen and ($media-tablet-portrait){ width: 80% }
-			@media only screen and ($media-tablet-landscape){ width: 70%; }
-			@media only screen and ($media-laptop){ width: 60%; }
-			@media only screen and ($media-desktop){ width: 50%; }			
-			font-size: 12px;
+			@media only screen and ($media-tablet-portrait){ width: 85% }
+			@media only screen and ($media-tablet-landscape){ width: 80%; }
+			@media only screen and ($media-laptop){ width: 75%; }
+			@media only screen and ($media-desktop){ width: 70%; }			
+			font-size: 18px;
+			font-family: $family--serif;
 			font-weight: 300;
 			line-height: 1.5;
 			margin: 0;
 			color: white;
-			color: rgba(255, 255, 255, 0.8);
+			color: rgba(255, 255, 255, 0.7);			
 		}
 	}
 }

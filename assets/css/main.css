@@ -333,7 +333,7 @@ html {
 body {
   height: 100%;
   font-size: 16px;
-  background: #3D4351;
+  background: #1E2229;
   font-family: "museo-sans", helvetica, arial, sans-serif;
   color: white; }
 
@@ -475,7 +475,7 @@ body {
       -webkit-animation-delay: 0.2s;
               animation-delay: 0.2s; }
   .navigation__link {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
@@ -485,6 +485,10 @@ body {
     text-decoration: none;
     margin-top: 2px;
     opacity: 0; }
+    .navigation__link:hover {
+      color: white; }
+    .navigation__link.is-active {
+      color: white; }
     .navigation__link--home.is-open {
       -webkit-animation: nav-show 0.3s 0 forwards;
               animation: nav-show 0.3s 0 forwards; }
@@ -522,11 +526,11 @@ body {
         padding: 0 40px; } }
 
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(8, 9, 11, 0.9); }
 
 .footer__title {
   float: left;
@@ -580,7 +584,8 @@ footer {
       padding: 0 40px; } }
   .lead--home__title {
     width: 100%;
-    font-size: 28px;
+    font-size: 42px;
+    font-family: "minion-pro", georgia, serif;
     margin: 0;
     padding-bottom: 8px;
     font-weight: 100;
@@ -605,7 +610,9 @@ footer {
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
-    padding: 0 0 10px 0; }
+    padding: 0 0 10px 0;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8); }
     @media only screen and (min-width: 480px) {
       .lead--home__subtitle {
         width: 80%; } }
@@ -620,21 +627,155 @@ footer {
         width: 50%; } }
   .lead--home__copy {
     width: 100%;
-    font-size: 12px;
+    font-size: 18px;
+    font-family: "minion-pro", georgia, serif;
     font-weight: 300;
     line-height: 1.5;
     margin: 0;
     color: white;
-    color: rgba(255, 255, 255, 0.8); }
+    color: rgba(255, 255, 255, 0.7); }
     @media only screen and (min-width: 480px) {
       .lead--home__copy {
-        width: 80%; } }
+        width: 85%; } }
     @media only screen and (min-width: 768px) {
       .lead--home__copy {
-        width: 70%; } }
+        width: 80%; } }
     @media only screen and (min-width: 1024px) {
       .lead--home__copy {
-        width: 60%; } }
+        width: 75%; } }
     @media only screen and (min-width: 1200px) {
       .lead--home__copy {
-        width: 50%; } }
+        width: 70%; } }
+
+.post__container {
+  max-width: 670px;
+  margin: 0 auto;
+  padding: 60px 20px; }
+.post__list__link {
+  display: block;
+  text-decoration: none;
+  margin: 0 0 60px 0; }
+.post__list__date {
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 2px; }
+.post__list__title {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "minion-pro", georgia, serif;
+  color: white;
+  margin: 0; }
+.post__list__excerpt {
+  font-size: 16px;
+  font-family: "minion-pro", georgia, serif;
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 100; }
+.post__container--header {
+  padding: 60px 40px 0 40px; }
+.post__single__title {
+  text-align: center;
+  font-size: 42px;
+  font-family: "minion-pro", georgia, serif;
+  margin: 0 0 5px 0;
+  font-weight: 100; }
+.post__single__date {
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 2px; }
+.post__single__excerpt {
+  font-size: 18px;
+  font-family: "minion-pro", georgia, serif;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 100;
+  min-height: 86px;
+  margin-bottom: 40px !important; }
+  .post__single__excerpt:first-child:first-letter {
+    float: left;
+    color: white;
+    font-size: 95px;
+    line-height: 0.5;
+    margin-top: 16px;
+    padding-right: 15px; }
+.post__container--single {
+  padding: 60px 0 120px 0; }
+  .post__container--single p {
+    max-width: 670px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-family: "minion-pro", georgia, serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5; }
+  .post__container--single a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+    .post__container--single a:hover {
+      color: #74A3D4; }
+  .post__container--single h1, .post__container--single h2, .post__container--single h3 {
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 40px 20px 10px 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 18px; }
+  .post__container--single code {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    padding: 2px 8px 0 8px;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    margin: 0 2px; }
+  .post__container--single pre code {
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .post__container--single h4, .post__container--single h5, .post__container--single h6 {
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 40px 20px 10px 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1px; }
+  .post__container--single blockquote {
+    margin: 30px 20px;
+    padding: 0; }
+    .post__container--single blockquote p {
+      border-left: 5px solid #6089B4;
+      max-width: 830px;
+      padding: 20px;
+      text-align: center;
+      font-style: italic;
+      color: white; }
+
+.page__title {
+  max-width: 1040px;
+  font-weight: 100;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  font-size: 44px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-family: "minion-pro", georgia, serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }

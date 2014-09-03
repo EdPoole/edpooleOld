@@ -1,0 +1,11 @@
+url: http://edpoole.github.com
+site_name: "Designer and Front-end Developer"
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+highlighter: pygments
+permalink: /articles/:title
+paginate_path: 'articles/:num'
+paginate: 5
+baseurl: /
+exclude: [node_modules]

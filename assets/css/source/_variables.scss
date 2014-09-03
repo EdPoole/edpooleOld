@@ -1,6 +1,7 @@
 // fonts
+$family--serif: "minion-pro", georgia, serif;
 $family--sans: "museo-sans", helvetica, arial, sans-serif;
-$family--mono: consolas, monospace;
+$family--mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
 
 // Breakpoints
@@ -18,5 +19,12 @@ $media-tablet-landscape: unquote('min-width: 768px');
 $media-tablet-portrait:	unquote('min-width: 480px');
 
 // Colours
+$theme--dark: #1E2229;
+$theme--green: #99CC32;
+$theme--red: #CE4449;
+$theme--blue: #147BD7;
+$theme--yellow: #E6BB31;
 
-$body: #3D4351;
+
+$body: $theme--dark;
+
