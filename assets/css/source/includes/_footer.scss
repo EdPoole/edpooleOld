@@ -1,0 +1,33 @@
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+	&__title {
+		float: left;
+		font-size: 12px;
+		line-height: 1;
+		margin: 0;
+		padding: 20px 0 18px 0;
+		font-weight: 100;
+		a {
+			display: inline-block;
+		}
+	}
+	&__nav {
+		float: right;
+		a {
+			text-transform: uppercase;
+			color: #727185;
+			text-decoration: none;
+			font-size: 10px;
+			margin-left: 5px;
+			padding: 20px 10px 18px 10px;
+			display: inline-block;
+		}
+	}
+}

@@ -1,3 +1,9 @@
+@import "normalize";
 @import "variables";
 @import "animations";
-@import "lead";
+@import "mixins";
+@import "base";
+
+@import "includes/navigation";
+@import "includes/footer";
+@import "includes/lead";

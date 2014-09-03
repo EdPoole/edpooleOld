@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	height: 100%;
+	font-size: 16px;
+	background: $body;
+	font-family: $family--sans;
+	// background: radial-gradient(ellipse farthest-side at 100% 100%, lighten($body, 5%) 0%, $body 120%);
+	color: white;
+}
+
+.site__width {
+	@include site-width;
+}

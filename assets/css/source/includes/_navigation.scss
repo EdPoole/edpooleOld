@@ -1,0 +1,35 @@
+.navigation {
+	&__toggle {
+		display: inline-block;
+		border-radius: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		padding: 10px 9px 9px;
+		position: relative;
+		z-index: 1;
+		height: 34px;
+		width: 34px;
+		padding: 10px 0 0 9px; 
+		span {
+			width: 14px;
+			background: white;
+			height: 2px;
+			display: block;
+			border-radius: 2px;
+			transition: all 0.6s;
+			&:nth-child(1) {}
+			&:nth-child(2) { margin: 3px 0; }
+			&:nth-child(3) {}
+		}
+		&.is-open {
+			span {
+				&:nth-child(1) { transform: translateY(5px) rotate(-45deg); }
+				&:nth-child(2) { transform: rotate(-45deg); opacity: 0; }
+				&:nth-child(3) { transform: translateY(-5px) rotate(45deg); transform-origin: bottom 50%; }
+			}	
+		}
+	}
+	&__slug {
+		@include site-width;
+		margin-top: 40px;
+	}
+}
