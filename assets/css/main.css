@@ -398,25 +398,17 @@ body {
 
 @-webkit-keyframes nav-hide {
   0% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
+    opacity: 1; }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); } }
+    opacity: 0; } }
 
 @keyframes nav-hide {
   0% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
+    opacity: 1; }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); } }
+    opacity: 0; } }
 
 .navigation {
   position: relative;
@@ -497,8 +489,8 @@ body {
       -webkit-animation: nav-show 0.3s 0 forwards;
               animation: nav-show 0.3s 0 forwards; }
     .navigation__link--home.is-closed {
-      -webkit-animation: nav-hide 0.3s 0.1s forwards;
-              animation: nav-hide 0.3s 0.1s forwards; }
+      -webkit-animation: nav-hide 0.3s 0 forwards;
+              animation: nav-hide 0.3s 0 forwards; }
     .navigation__link--articles.is-open {
       -webkit-animation: nav-show 0.3s 0.05s forwards;
               animation: nav-show 0.3s 0.05s forwards; }
@@ -509,8 +501,8 @@ body {
       -webkit-animation: nav-show 0.3s 0.1s forwards;
               animation: nav-show 0.3s 0.1s forwards; }
     .navigation__link--portfolio.is-closed {
-      -webkit-animation: nav-hide 0.3s 0 forwards;
-              animation: nav-hide 0.3s 0 forwards; }
+      -webkit-animation: nav-hide 0.3s 0.1s forwards;
+              animation: nav-hide 0.3s 0.1s forwards; }
   .navigation__slug {
     max-width: 100%;
     margin: 0 auto;

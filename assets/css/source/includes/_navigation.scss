@@ -10,8 +10,8 @@
 }
 
 @keyframes nav-hide {	
-	0% { opacity: 1; transform: translateX(0); }
-	100% { opacity: 0; transform: translateX(-10px); }
+	0% { opacity: 1; }
+	100% { opacity: 0; }
 }
 
 .navigation {
@@ -75,7 +75,7 @@
 		opacity: 0;
 		&--home {
 			&.is-open   { animation: nav-show 0.3s 0 forwards; }
-			&.is-closed { animation: nav-hide 0.3s 0.1s forwards; }
+			&.is-closed { animation: nav-hide 0.3s 0 forwards; }
 		}
 		&--articles { 
 			&.is-open   { animation: nav-show 0.3s 0.05s forwards; }
@@ -83,7 +83,7 @@
 		}
 		&--portfolio {
 			&.is-open   { animation: nav-show 0.3s 0.1s forwards; }
-			&.is-closed { animation: nav-hide 0.3s 0 forwards; }
+			&.is-closed { animation: nav-hide 0.3s 0.1s forwards; }
 		}
 	}
 	&__slug {
