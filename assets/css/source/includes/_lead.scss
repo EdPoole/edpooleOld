@@ -13,7 +13,10 @@
 		margin: 0 auto;
 		position: relative;
 		top: calc(50% - 25px);
-		transform: translateY(-50%);		
+		transform: translateY(-50%);
+		&.is-blurred {
+			filter: blur(2px);
+		}		
 		&__title {
 			width: 100%;
 			@media only screen and ($media-tablet-portrait) { width: 80% }
