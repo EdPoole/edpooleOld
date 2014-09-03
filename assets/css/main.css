@@ -772,10 +772,19 @@ footer {
 .page__title {
   max-width: 1040px;
   font-weight: 100;
-  margin: 0 auto;
   padding: 0 0 10px 0;
   font-size: 44px;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin: 40px 20px 10px 20px;
   font-family: "minion-pro", georgia, serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  @media only screen and (min-width: 1200px) {
+    .page__title {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      margin-top: 40px; } }
+  @media only screen and (min-width: 1024px) {
+    .page__title {
+      margin: 0 auto;
+      max-width: 984px;
+      margin-bottom: 10px;
+      margin-top: 40px; } }
