@@ -12,7 +12,7 @@
 		@include site-width;
 		margin: 0 auto;
 		position: relative;
-		margin-top: 50px;
+		margin-top: 70px;
 		@media only screen and ($media-tablet-portrait) {
 			top: calc(50% - 25px);
 			transform: translateY(-50%);
