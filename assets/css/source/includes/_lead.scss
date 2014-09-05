@@ -12,10 +12,10 @@
 		@include site-width;
 		margin: 0 auto;
 		position: relative;
-		top: 50%;
-		@media only screen and ($media-tablet-portrait) {
+		// top: 50%;
+		// @media only screen and ($media-tablet-portrait) {
 			top: calc(50% - 25px);
-		}
+		// }
 		transform: translateY(-50%);
 		&__title {
 			width: 100%;
