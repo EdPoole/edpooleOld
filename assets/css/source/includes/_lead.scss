@@ -14,6 +14,7 @@
 		position: relative;
 		margin-top: 80px;
 		@media only screen and ($media-tablet-portrait) {
+			margin-top: 0;
 			top: calc(50% - 25px);
 			transform: translateY(-50%);
 		}		
