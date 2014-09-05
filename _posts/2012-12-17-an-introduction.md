@@ -3,7 +3,6 @@ layout: post
 title: An Introduction
 comments: true
 date: 17th December 2012
-cover: an-introduction.jpg
 extract: So I've finally got round to setting up my blog.
 ---
 

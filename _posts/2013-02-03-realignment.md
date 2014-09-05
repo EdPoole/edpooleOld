@@ -3,7 +3,6 @@ layout: post
 title: Retweaking
 comments: true
 date: 13rd February 2013
-cover: retweaking.jpg
 extract: I took a couple of weeks off to retweak my blog to make it easier to consume content.
 ---
 

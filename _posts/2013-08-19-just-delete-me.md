@@ -3,7 +3,6 @@ layout: post
 title: Just Delete Me.
 comments: true
 date: 19th August 2013
-cover: just-delete-me.jpg
 extract: Last week, I spent the best part of an hour ranting at Robb Lewis about the inability to delete my Netflix Account. In a bid to shut me up, he created justdelete.me, a directory of direct links to delete your account from various web services.
 ---
 

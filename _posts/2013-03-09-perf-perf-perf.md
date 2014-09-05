@@ -3,7 +3,6 @@ layout: post
 title: Perf, Perf, Perf.
 comments: true
 date: 9th March 2013
-cover: perf-perf-perf.jpg
 extract: It turns out studying performance is actually fun. I've managed to cut a considerable amount of load time off this website by paying close attention to my waterfall graphs and seeing what is slowing me down.
 ---
 

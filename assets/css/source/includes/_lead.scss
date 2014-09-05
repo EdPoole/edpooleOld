@@ -56,7 +56,16 @@
 			line-height: 1.5;
 			margin: 0;
 			color: white;
-			color: rgba(255, 255, 255, 0.7);			
+			color: rgba(255, 255, 255, 0.9);
+			a {
+				transition: all 0.3s;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover {
+					color: #73A2D3;
+				}
+			}		
 		}
 	}
 }
