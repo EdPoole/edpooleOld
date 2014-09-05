@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        style: 'expanded'
+        outputStyle: 'compressed'
         sourcemap: true
       dist:
         files: 
@@ -26,8 +26,15 @@ module.exports = (grunt) ->
         nospawn: true
         interrupt: true
 
+    uglify:
+      compress_mangle:
+        files:
+          'assets/js/main.min.js': ['assets/js/jquery.js', 'assets/js/prism.js', 'assets/js/main.js']
+
+
   grunt.loadNpmTasks 'grunt-sass'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-autoprefixer'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
 
-  grunt.registerTask 'default', ['sass', 'autoprefixer', 'watch']
+  grunt.registerTask 'default', ['sass', 'autoprefixer', 'uglify', 'watch']
