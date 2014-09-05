@@ -39,6 +39,17 @@ This was most definitely the biggest overhead I had on my site. When I originall
 
 Before I started checking my site's performance, I was calling 264kb worth of fonts from Typekit. I had two fonts (Proxima Nova and Adelle), with around 5 weights each. Although I complained about Georgia originally, I think it's well worth using in place of Adelle as I save a massive 161kb. On top of that, I managed to cut down the amount of weights I was calling for Proxima Nova (down to thin, light and regular). This managed to save me another 28kb. I've now cut my total Typekit resources down to 75kb.
 
+
+```language-css
+// Code Block Comment
+
+.foobar {
+	width: 100px;
+	height: 200px;
+}
+
+```
+
 ### General Performance & things left to do.
 
 I've placed a dns-prefetch for typekit in the head of my document, which means DNS lookup will have happened before the typekit request is processed at the bottom of my html document. I haven't noticed any particular speed increase because of this, however as there's no harm from including the prefetch, I'm going to leave it in.

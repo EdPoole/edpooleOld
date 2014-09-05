@@ -20,7 +20,7 @@ module.exports = (grunt) ->
         dest: 'assets/css/main.css'    
 
     watch:
-      files: ['assets/css/source/*.scss']
+      files: ['assets/css/source/*.scss', 'assets/css/source/**/*.scss']
       tasks: ['sass', 'autoprefixer']
       options:
         nospawn: true

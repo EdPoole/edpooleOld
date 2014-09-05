@@ -1,24 +1,13 @@
 .page {
 
 	&__title {
-		max-width: 1040px;
+		max-width: 670px;
 		font-weight: 100;
-		padding: 0 0 10px 0;
+		padding: 60px 20px 20px 20px;
 		font-size: 44px;
-		margin: 40px 20px 10px 20px;
+		margin: 0 auto;
 		font-family: $family--serif;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		@media only screen and ($media-desktop) {
-			margin: 0 auto;
-			margin-bottom: 10px;
-			margin-top: 40px;
-		}
-		@media only screen and ($media-laptop) {
-			margin: 0 auto;
-			max-width: 984px;
-			margin-bottom: 10px;
-			margin-top: 40px;
-		}
+		text-align: center;
 	}
 
 }

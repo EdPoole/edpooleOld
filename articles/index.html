@@ -13,16 +13,16 @@ layout: page
 	</a>
 	{% endfor %}
 
-	<div class="content content--pagination">
+	<div class="post__pagination">
 		{% if paginator.previous_page %}		
 			{% if paginator.previous_page == 1 %}
-				<a href="/articles/" class="content--pagination__previous">Newer Posts</a>
+				<a href="/articles/" class="post__pagination__link post__pagination__link--newer">Newer Posts</a>
 			{% else %}
-				<a href="/articles/{{paginator.previous_page}}" class="content--pagination__previous">Newer Posts</a>
+				<a href="/articles/{{paginator.previous_page}}" class="post__pagination__link post__pagination__link--newer">Newer Posts</a>
 			{% endif %}
 		{% endif %}
 		{% if paginator.next_page %}
-			<a href="/articles/{{paginator.next_page}}" class="content--pagination__next">Older Posts</a>
+			<a href="/articles/{{paginator.next_page}}" class=" post__pagination__link  post__pagination__link--older">Older Posts</a>
 		{% endif %}
 	</div>
 </div>

@@ -4,8 +4,10 @@
 @import "mixins";
 @import "base";
 
+@import "libs/prismjs";
+
 @import "includes/navigation";
-@import "includes/footer";
 @import "includes/lead";
 @import "includes/post";
 @import "includes/page";
+@import "includes/portfolio";

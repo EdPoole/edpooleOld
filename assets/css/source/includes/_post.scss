@@ -61,6 +61,7 @@
 			text-transform: uppercase;
 			margin: 0;
 			text-align: center;
+			font-weight: bold;
 			letter-spacing: 2px;
 		}
 
@@ -91,7 +92,11 @@
 			padding: 10px 20px;
 			margin: 0 auto;
 			font-family: $family--serif;
-			font-size: 18px;
+			font-size: 20px;
+
+			// Thanks Medium.com <3
+			letter-spacing: -0.01em;
+
 			color: rgba(255, 255, 255, 0.7);
 			line-height: 1.5;
 		}
@@ -109,27 +114,8 @@
 			max-width: 670px;
 			margin: 0 auto;
 			padding: 40px 20px 10px 20px;
-			text-transform: uppercase;
-			font-weight: 100;
-			font-size: 18px;
-		}
-		code {
-			font-family: $family--mono;
 			font-weight: bold;
-			font-size: 14px;
-			display: inline-block;
-			padding: 2px 8px 0 8px;
-			background: rgba(0, 0, 0, 0.4);
-			border-radius: 2px;
-			margin: 0 2px;
-		}
-		pre code {
-			display: block;
-			background: rgba(0, 0, 0, 0.4);
-			border-radius: 2px;
-			margin: 0 auto;
-			margin-top: 20px;
-			margin-bottom: 20px;
+			font-size: 18px;
 		}
 		h4,
 		h5,
@@ -138,7 +124,7 @@
 			margin: 0 auto;
 			padding: 40px 20px 10px 20px;
 			text-transform: uppercase;
-			font-weight: 100;
+			font-weight: bold;
 			font-size: 14px;
 			letter-spacing: 1px;
 		}
@@ -153,6 +139,52 @@
 				font-style: italic;
 				color: white;				
 			}
+		}
+		ul {
+			max-width: 670px;
+			margin: 0 auto;
+		}
+		code {
+			font-family: $family--mono;
+			font-weight: bold;
+			font-size: 14px;
+			display: inline-block;
+			padding: 2px 8px 0 8px;
+			background: rgba(0, 0, 0, 0.4);
+			border-radius: 2px;
+			margin: 0 2px;
+		}
+		pre {
+			overflow: auto;
+			margin: 0 auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			max-width: 630px;
+			code {
+				display: block;
+				background: rgba(0, 0, 0, 0.4);
+				border-radius: 2px;
+				padding: 20px;
+			}
+		}
+	}
+
+	&__pagination {
+		@include clearfix;
+		padding: 40px 0 10px 0;
+		&__link {
+			color: white;
+			font-family: $family--serif;
+			font-size: 24px;
+			font-weight: 100;
+			padding: 10px 0;
+			text-decoration: none;
+			transition: all 0.3s;
+			&:hover {
+				color: #74A3D4;
+			}
+			&--newer { float: left; }
+			&--older { float: right; }
 		}
 	}
 }

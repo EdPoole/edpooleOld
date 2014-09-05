@@ -1,12 +1,14 @@
 {% include header.html %}
 {% include navigation.html %}
 
-<div class="site__width post__container--header">
-<h1 class="post__single__title">{{ page.title }}</h1>
-<h2 class="post__single__date">{{ page.date | date: "%B %d, %Y" }}</h2>
-</div>
-<div class="post__container--single">
-	<p class="post__single__excerpt">{{ page.extract }}</p>
-	{{ content }}
+<div class="content-to-fade">
+	<div class="site__width post__container--header">
+	<h1 class="post__single__title">{{ page.title }}</h1>
+	<h2 class="post__single__date">{{ page.date | date: "%B %d, %Y" }}</h2>
+	</div>
+	<div class="post__container--single">
+		<p class="post__single__excerpt">{{ page.extract }}</p>
+		{{ content }}
+	</div>
 </div>
 {% include footer.html %}
