@@ -1,0 +1,31 @@
+// fonts
+// $family--serif:  "minion-pro", georgia, serif;
+$family--serif: "freight-text-pro", georgia, serif;
+$family--sans: "museo-sans", helvetica, arial, sans-serif;
+$family--mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+
+// Breakpoints
+
+$laptop:           1200px;
+$tablet-landscape: 1024px;
+$tablet-portrait:  768px;
+$mobile:           480px;
+
+// Media Queries
+
+$media-desktop:	unquote('min-width: 1200px');
+$media-laptop:	unquote('min-width: 1024px');
+$media-tablet-landscape: unquote('min-width: 768px');
+$media-tablet-portrait:	unquote('min-width: 480px');
+
+// Colours
+$theme--dark: #1E2229;
+$theme--green: #99CC32;
+$theme--red: #CE4449;
+$theme--blue: #147BD7;
+$theme--yellow: #E6BB31;
+
+
+$body: $theme--dark;
+

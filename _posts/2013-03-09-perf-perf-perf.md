@@ -3,7 +3,6 @@ layout: post
 title: Perf, Perf, Perf.
 comments: true
 date: 9th March 2013
-cover: perf-perf-perf.jpg
 extract: It turns out studying performance is actually fun. I've managed to cut a considerable amount of load time off this website by paying close attention to my waterfall graphs and seeing what is slowing me down.
 ---
 
@@ -38,6 +37,17 @@ I created a Photoshop file 220% larger than the image I needed. When it came to 
 This was most definitely the biggest overhead I had on my site. When I originally decided to use Typekit, I definitely went a bit overboard with the amount of fonts and weight I used. 
 
 Before I started checking my site's performance, I was calling 264kb worth of fonts from Typekit. I had two fonts (Proxima Nova and Adelle), with around 5 weights each. Although I complained about Georgia originally, I think it's well worth using in place of Adelle as I save a massive 161kb. On top of that, I managed to cut down the amount of weights I was calling for Proxima Nova (down to thin, light and regular). This managed to save me another 28kb. I've now cut my total Typekit resources down to 75kb.
+
+
+```language-css
+// Code Block Comment
+
+.foobar {
+	width: 100px;
+	height: 200px;
+}
+
+```
 
 ### General Performance & things left to do.
 

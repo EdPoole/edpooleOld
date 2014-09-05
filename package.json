@@ -1,0 +1,25 @@
+{
+  "name": "edpoole.me",
+  "description": "Ed Poole",
+  "version": "3.0.0",
+  "homepage": "http://edpoole.me",
+  "author": {
+    "name": "Ed Poole",
+    "email": "ed@edpoole.me",
+    "url": "http://edpoole.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edpoole/edpoole.gihtub.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edpoole/edpoole.github.com/issues"
+  },
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-autoprefixer": "^0.8.2",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "0.3.1",
+    "grunt-sass": "^0.14.1"
+  }
+}

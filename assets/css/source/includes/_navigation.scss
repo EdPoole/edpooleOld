@@ -1,0 +1,100 @@
+@keyframes opacity-flex {
+	0% { opacity: 1 }
+	50% { opacity: 0.5 }
+	100% { opacity: 1 }
+}
+
+@keyframes nav-show {
+	0% { opacity: 0; transform: translateX(-10px); }
+	100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes nav-hide {	
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.navigation {
+	position: relative;
+	z-index: 1;
+	&__toggle {
+		display: inline-block;
+		border-radius: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		padding: 10px 9px 9px;
+		position: relative;
+		height: 34px;
+		width: 34px;
+		padding: 10px 0 0 9px;
+		vertical-align: middle;
+		margin-right: 10px;
+		span {
+			width: 14px;
+			background: white;
+			height: 2px;
+			display: block;
+			border-radius: 2px;
+			transition: all 0.3s;
+			&:nth-child(1) {}
+			&:nth-child(2) { margin: 3px 0; }
+			&:nth-child(3) {}
+		}
+		&.is-open {
+			span {
+				&:nth-child(1) { transform: translateY(5px) rotate(-45deg);}
+				&:nth-child(2) { transform: rotate(-45deg); opacity: 0;}
+				&:nth-child(3) { transform: translateY(-5px) rotate(45deg); transform-origin: bottom 50%;}
+			}
+			&:hover {
+				// Unset the hover animation
+				span {
+					&:nth-child(1) { animation: none;}
+					&:nth-child(2) { animation: none;}
+					&:nth-child(3) { animation: none;}
+				}
+			}
+		}
+		&:hover {
+			span {
+				&:nth-child(1) { animation: opacity-flex 0.3s; }
+				&:nth-child(2) { animation: opacity-flex 0.3s; animation-delay: 0.1s; }
+				&:nth-child(3) { animation: opacity-flex 0.3s; animation-delay: 0.2s; }
+			}
+		}
+	}
+	&__link {
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1;
+		display: inline-block;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding: 5px;
+		text-decoration: none;
+		font-weight: bold;
+		margin-top: 2px;
+		opacity: 0;
+		&:hover {
+			color: white;
+		}
+		&.is-active {
+			color: white;
+		}
+		&--home {
+			&.is-open   { animation: nav-show 0.3s 0 forwards; }
+			&.is-closed { animation: nav-hide 0.3s 0 forwards; }
+		}
+		&--articles { 
+			&.is-open   { animation: nav-show 0.3s 0.05s forwards; }
+			&.is-closed { animation: nav-hide 0.3s 0.05s forwards; }
+		}
+		&--portfolio {
+			&.is-open   { animation: nav-show 0.3s 0.1s forwards; }
+			&.is-closed { animation: nav-hide 0.3s 0.1s forwards; }
+		}
+	}
+	&__slug {
+		@include site-width;
+		margin-top: 40px;		
+	}
+}

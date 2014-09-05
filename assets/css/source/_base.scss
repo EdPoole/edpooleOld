@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+	font-size: 16px;
+}
+
+body {
+	height: 100%;	
+	background: $body;
+	font-family: $family--sans;
+	// background: radial-gradient(ellipse farthest-side at 100% 100%, lighten($body, 5%) 0%, $body 120%);
+	color: white;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings:"liga", "dlig";
+	font-size: 80%
+}
+
+h1 {
+	font-feature-settings:"liga", "dlig";
+}
+
+.site__width {
+	@include site-width;
+}
+
+@keyframes site-fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.content-to-fade {
+	animation: site-fade 0.25s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both;
+}
+
+.is-exiting {
+	animation-direction: alternate-reverse;
+}

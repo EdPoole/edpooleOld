@@ -1,0 +1,75 @@
+
+.lead {
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+	}
+	&--home {
+		@include site-width;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		@media only screen and ($media-tablet-portrait) {
+			top: calc(50% - 25px);
+		}
+		transform: translateY(-50%);
+		&__title {
+			width: 100%;
+			@media only screen and ($media-tablet-portrait) { width: 80% }
+			@media only screen and ($media-tablet-landscape) { width: 70%; }
+			@media only screen and ($media-laptop) { width: 60%; }
+			@media only screen and ($media-desktop) { width: 50%; }			
+			font-size: 42px;
+			font-family: $family--serif;
+			margin: 0;
+			padding-bottom: 8px;
+			font-weight: 100;
+			margin-left: -2px;
+			span {
+				font-weight: 400;
+			}
+		}
+		&__subtitle {
+			width: 100%;
+			@media only screen and ($media-tablet-portrait) { width: 80% }
+			@media only screen and ($media-tablet-landscape) { width: 70%; }
+			@media only screen and ($media-laptop) { width: 60%; }
+			@media only screen and ($media-desktop) { width: 50%; }			
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: bold;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0 0 10px 0;
+			letter-spacing: 2px;
+			color: rgba(255, 255, 255, 0.8);
+		}
+		&__copy {
+			width: 100%;
+			@media only screen and ($media-tablet-portrait){ width: 85% }
+			@media only screen and ($media-tablet-landscape){ width: 80%; }
+			@media only screen and ($media-laptop){ width: 75%; }
+			@media only screen and ($media-desktop){ width: 70%; }			
+			font-size: 18px;
+			font-family: $family--serif;
+			font-weight: 300;
+			line-height: 1.5;
+			margin: 0;
+			color: white;
+			color: rgba(255, 255, 255, 0.9);
+			a {
+				transition: all 0.3s;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover {
+					color: #73A2D3;
+				}
+			}		
+		}
+	}
+}

@@ -3,7 +3,7 @@ site_name: "Designer and Front-end Developer"
 markdown: rdiscount
 rdiscount:
     extensions: [smart]
-pygments: true
+highlighter: pygments
 permalink: /articles/:title
 paginate_path: 'articles/:num'
 paginate: 5

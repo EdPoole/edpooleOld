@@ -1,12 +1,10 @@
-<div class="g">
-	<div class="site-nav__logo">
-		<a href="/">Ed <span>Poole</span></a>
-	</div>
- 	<nav class="site-nav__links">
-		<a class="site-nav__link" href="/">Home</a>
-		<a class="site-nav__link" href="/portfolio/">Portfolio</a>
-		<a class="site-nav__link" href="/articles/">Articles</a>
-		<a class="site-nav__link" href="/about/">About</a>
-		<a class="site-nav__link" href="/contact/" id="contact">Contact</a>		
-	</nav>
+<div class="navigation navigation__slug">
+	<a href="#" class="navigation__toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a href="/" class="navigation__link navigation__link--home {% if page.url == '/index.html' %} is-active {% endif %}">Home</a>
+	<a href="/articles" class="navigation__link navigation__link--articles {% if page.url == '/articles/index.html' %} is-active {% endif %}">Articles</a>
+	<a href="/portfolio" class="navigation__link navigation__link--portfolio {% if page.url == '/portfolio/index.html' %} is-active {% endif %}">Portfolio</a>
 </div>

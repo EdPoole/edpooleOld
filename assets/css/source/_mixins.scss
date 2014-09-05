@@ -1,0 +1,23 @@
+@mixin clearfix {
+	&:after {
+		clear: both;
+		display: table;
+		content: "";
+	}
+}
+
+
+@mixin site-width {
+	@include clearfix;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	@media only screen and ($media-laptop) {
+		max-width: 1024px;
+		padding: 0 20px;
+	}
+	@media only screen and ($media-desktop) {
+		max-width: 1120px;
+		padding: 0 40px;
+	}
+}
