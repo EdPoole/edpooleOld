@@ -74,6 +74,7 @@
 		font-weight: bold;
 		margin-top: 2px;
 		opacity: 0;
+		pointer-events: none;
 		&:hover {
 			color: white;
 		}
@@ -81,15 +82,15 @@
 			color: white;
 		}
 		&--home {
-			&.is-open   { animation: nav-show 0.3s 0 forwards; }
+			&.is-open   { animation: nav-show 0.3s 0 forwards; pointer-events: auto; }
 			&.is-closed { animation: nav-hide 0.3s 0 forwards; }
 		}
 		&--articles { 
-			&.is-open   { animation: nav-show 0.3s 0.05s forwards; }
+			&.is-open   { animation: nav-show 0.3s 0.05s forwards; pointer-events: auto; }
 			&.is-closed { animation: nav-hide 0.3s 0.05s forwards; }
 		}
 		&--portfolio {
-			&.is-open   { animation: nav-show 0.3s 0.1s forwards; }
+			&.is-open   { animation: nav-show 0.3s 0.1s forwards; pointer-events: auto; }
 			&.is-closed { animation: nav-hide 0.3s 0.1s forwards; }
 		}
 	}
