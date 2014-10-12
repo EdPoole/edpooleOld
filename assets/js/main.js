@@ -57,6 +57,7 @@
 	$('.theme-switcher').click(function(e) {
 		e.preventDefault();
 		$('.bg-cover').toggleClass('is-toggled');
+		$('body').toggleClass('text-shadow');
 	});
 
 	var toggle = false;
