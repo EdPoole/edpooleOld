@@ -5,7 +5,15 @@
 		dribbbleTitle = [],
 		dribbbleImage = [],
 		dribbbleUrls = [],
-		dribbbleLikes = [];
+		dribbbleLikes = [],
+		themes = [
+			'theme-green',
+			'theme-red',
+			'theme-blue',
+			'theme-yellow',
+			'theme-dark'
+		],
+		themeInit = 'theme-dark';
 
 	$.ajax({
 		type: 'GET',
@@ -33,6 +41,23 @@
 		$('.dribbble img').fadeIn('fast');
 	}
 
+	// var i = 0;
+	// var previousTheme = themeInit;
+	// $('.theme-switcher').click(function(e) {
+	// 	e.preventDefault();
+	// 	$('html').removeClass(previousTheme);
+	// 	$('html').addClass(themes[i]);
+	// 	previousTheme = themes[i];
+	// 	i++;
+	// 	if (i === 5) {
+	// 		i = 0;
+	// 	}
+	// });
+
+	$('.theme-switcher').click(function(e) {
+		e.preventDefault();
+		$('.bg-cover').toggleClass('is-toggled');
+	});
 
 	var toggle = false;
 	$('.navigation__toggle').click(function(e) {

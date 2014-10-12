@@ -5,14 +5,16 @@
 html {
 	min-height: 100%;
 	font-size: 16px;
+	transition: all 0.2s;
 }
 
 body {
 	height: 100%;	
-	background: $body;
+	@include generate-theme(background, background, 1);
 	font-family: $family--sans;
 	// background: radial-gradient(ellipse farthest-side at 100% 100%, lighten($body, 5%) 0%, $body 120%);
-	color: white;
+	// color: white;
+	@include generate-theme(color, copy, 1);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -26,6 +28,21 @@ h1 {
 
 .site__width {
 	@include site-width;
+}
+
+.bg-cover {
+	background-image: url(/assets/img/cover.jpeg);
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	filter: blur(15px);
+	display: none;
+	&.is-toggled {
+		display: block;
+	}
 }
 
 @keyframes site-fade {

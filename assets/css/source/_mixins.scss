@@ -21,3 +21,23 @@
 		padding: 0 40px;
 	}
 }
+
+
+@mixin generate-theme($property, $key, $opacity) {
+    @each $theme in $themes {
+        $theme-name: nth($theme, 1);
+        $theme-contents: nth($theme, 2);
+        @each $theme-content in $theme-contents {
+            $theme-key: nth($theme-content, 1);
+            $theme-value: nth($theme-content, 2);
+            @if $theme-key == $key {
+            	$rgb: "rgb(" + #{$theme-value} + ")";
+            	$rgba: "rgba(" + #{$theme-value} + ", " + #{$opacity} + ")";
+                .#{$theme-name} & {
+                	#{$property}: #{$rgb};
+                    #{$property}: #{$rgba};
+                }
+            }
+        }        
+    }
+}

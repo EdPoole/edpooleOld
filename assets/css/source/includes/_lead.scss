@@ -47,7 +47,8 @@
 			margin: 0;
 			padding: 0 0 10px 0;
 			letter-spacing: 2px;
-			color: rgba(255, 255, 255, 0.8);
+			// color: rgba(255, 255, 255, 0.8);
+			@include generate-theme(color, copy, 0.8);
 		}
 		&__copy {
 			width: 100%;
@@ -60,15 +61,18 @@
 			font-weight: 300;
 			line-height: 1.5;
 			margin: 0;
-			color: white;
-			color: rgba(255, 255, 255, 0.9);
+			// color: white;
+			// color: rgba(255, 255, 255, 0.9);
+			@include generate-theme(color, copy, 0.9);
 			a {
 				transition: all 0.3s;
-				color: white;
+				// color: white;
+				@include generate-theme(color, copy, 1);
 				text-decoration: none;
 				font-weight: bold;
 				&:hover {
 					color: #73A2D3;
+					@include generate-theme(color, accent, 1);
 				}
 			}		
 		}

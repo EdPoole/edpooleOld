@@ -20,7 +20,9 @@
 	&__toggle {
 		display: inline-block;
 		border-radius: 50px;
-		border: 1px solid rgba(255, 255, 255, 0.6);
+		border: 1px solid;
+		// border: 1px solid rgba(255, 255, 255, 0.6);
+		@include generate-theme(border-color, copy, 0.6);
 		padding: 10px 9px 9px;
 		position: relative;
 		height: 34px;
@@ -30,7 +32,8 @@
 		margin-right: 10px;
 		span {
 			width: 14px;
-			background: white;
+			// background: white;
+			@include generate-theme(background, copy, 1);			
 			height: 2px;
 			display: block;
 			border-radius: 2px;
@@ -63,7 +66,8 @@
 		}
 	}
 	&__link {
-		color: rgba(255, 255, 255, 0.7);
+		// color: rgba(255, 255, 255, 0.7);
+		@include generate-theme(color, copy, 0.7);
 		line-height: 1;
 		display: inline-block;
 		vertical-align: middle;
@@ -75,11 +79,14 @@
 		margin-top: 2px;
 		opacity: 0;
 		pointer-events: none;
+		transition: all 0.2s;
 		&:hover {
-			color: white;
+			// color: white;
+			@include generate-theme(color, copy, 1);			
 		}
 		&.is-active {
-			color: white;
+			// color: white;
+			@include generate-theme(color, copy, 1);			
 		}
 		&--home {
 			&.is-open   { animation: nav-show 0.3s 0 forwards; pointer-events: auto; }
@@ -97,5 +104,34 @@
 	&__slug {
 		@include site-width;
 		margin-top: 40px;		
+	}
+}
+
+
+
+.theme-switcher {
+	float: right;
+	padding: 12px;
+	span {
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		.theme-dark & {
+			background: rgba(49, 54, 63, 1);
+		}
+		.theme-green & {
+			background: $theme--red;
+		}
+		.theme-red & {
+			background: $theme--blue;
+		}
+		.theme-blue & {
+			background: $theme--yellow;
+		}
+		.theme-yellow & {
+			background: $theme--dark;
+		}
+
 	}
 }

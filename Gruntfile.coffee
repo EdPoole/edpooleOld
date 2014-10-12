@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        outputStyle: 'compressed'
+        outputStyle: 'expanded'
         sourcemap: true
       dist:
         files: 
