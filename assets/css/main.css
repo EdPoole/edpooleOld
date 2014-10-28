@@ -829,7 +829,7 @@ h1 {
     color: rgb(53, 70, 18);
     color: rgba(53, 70, 18, 0.8); }
 .post__container--header {
-  padding: 60px 40px 0 40px; }
+  padding: 40px 40px 0 40px; }
 .post__single__title {
   text-align: center;
   font-size: 34px;

@@ -14,8 +14,6 @@
 			margin: 0 0 60px 0;
 		}
 		&__date {
-			// color: white;
-			// color: rgba(255, 255, 255, 0.7);
 			@include generate-theme(color, copy, 0.7);
 			font-size: 10px;
 			text-transform: uppercase;
@@ -26,15 +24,12 @@
 			font-size: 30px;
 			font-weight: 300;
 			font-family: $family--serif;
-			// color: white;
 			@include generate-theme(color, copy, 1);
 			margin: 0;
 		}
 		&__excerpt {
 			font-size: 16px;
 			font-family: $family--serif;
-			// color: white;
-			// color: rgba(255 ,255 ,255, 0.8);
 			@include generate-theme(color, copy, 0.8);
 			margin: 0;
 			line-height: 1.5;
@@ -45,7 +40,7 @@
 	// Post Single Styles
 
 	&__container--header {		
-		padding: 60px 40px 0 40px;
+		padding: 40px 40px 0 40px;
 	}
 	&__single {
 
@@ -61,8 +56,6 @@
 			}
 		}
 		&__date {
-			// color: white;
-			// color: rgba(255, 255, 255, 0.7);
 			@include generate-theme(color, copy, 0.7);
 			font-size: 10px;
 			text-transform: uppercase;
@@ -75,7 +68,6 @@
 		&__excerpt {
 			font-size: 18px;
 			font-family: $family--serif;
-			// color: rgba(255, 255, 255, 0.7);
 			@include generate-theme(color, copy, 0.7);
 			margin: 0;
 			line-height: 1.5;
@@ -84,7 +76,6 @@
 			margin-bottom: 40px !important;
 			&:first-child:first-letter {
 				float: left;
-				// color: white;
 				@include generate-theme(color, copy, 1);
 				font-size: 88px;
 				line-height: 0.5;
