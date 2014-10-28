@@ -20,12 +20,6 @@ $media-tablet-landscape: unquote('min-width: 768px');
 $media-tablet-portrait:	unquote('min-width: 480px');
 
 // Colours
-$theme--dark: rgb(30, 34, 41);
-$theme--green: rgb(153, 204, 50);
-$theme--red: #CE4449;
-$theme--blue: #147BD7;
-$theme--yellow: #E6BB31;
-
 
 $themes: (
     theme-dark (
@@ -33,28 +27,10 @@ $themes: (
         copy "255, 255, 255",
         accent "116, 163, 212"        
     ),
-    theme-green (
+    theme-light (
         background "153, 204, 50",
         copy "53, 70, 18",
         accent "255, 255, 255"
-    ),
-    theme-red (    	
-        background "206, 68, 73",
-        copy "87, 27, 30",        
-        accent "255, 255, 255"
-    ),
-    theme-blue (
-        background "20, 123, 215",        
-        copy "7, 37, 63",        
-        accent "255, 255, 255"
-    ),
-    theme-yellow (
-        background "230, 187, 49",        
-        copy "87, 71, 20",
-        accent "255, 255, 255"
     )
 );
-
-
-$body: $theme--yellow;
 

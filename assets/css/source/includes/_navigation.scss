@@ -106,32 +106,3 @@
 		margin-top: 40px;		
 	}
 }
-
-
-
-.theme-switcher {
-	float: right;
-	padding: 12px;
-	span {
-		display: block;
-		width: 10px;
-		height: 10px;
-		border-radius: 5px;
-		.theme-dark & {
-			background: rgba(49, 54, 63, 1);
-		}
-		.theme-green & {
-			background: $theme--red;
-		}
-		.theme-red & {
-			background: $theme--blue;
-		}
-		.theme-blue & {
-			background: $theme--yellow;
-		}
-		.theme-yellow & {
-			background: $theme--dark;
-		}
-
-	}
-}
