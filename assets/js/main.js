@@ -2,29 +2,20 @@
 	'use strict';
 
 	var dribbbleUrl = 'http://api.dribbble.com/players/edpoole/shots/',
-		dribbbleTitle = [],
 		dribbbleImage = [],
-		dribbbleUrls = [],
-		dribbbleLikes = [],
-		themes = [
-			'theme-green',
-			'theme-red',
-			'theme-blue',
-			'theme-yellow',
-			'theme-dark'
-		],
-		themeInit = 'theme-dark';
+		pageWidth = $(document).width(),
+		numberOfShotsPerLine = 10,
+		rows = 5;
+
 
 	$.ajax({
 		type: 'GET',
 		url: dribbbleUrl,
+		data: { per_page: '30' },
 		dataType: 'jsonp',
 		success: function(data) {
 			$.each(data.shots, function(i, shot) {
-				dribbbleTitle[i] = data.shots[i].title;
 				dribbbleImage[i] = data.shots[i].image_url;
-				dribbbleUrls[i] = data.shots[i].url;
-				dribbbleLikes[i] = data.shots[i].likes_count;
 			});
 			buildDisplay();
 		}
@@ -32,33 +23,19 @@
 
 
 	function buildDisplay() {
-		for (var i = 0; i < dribbbleTitle.length; i++) {
-			$('.portfolio__container')
-			.append('<a href="' + 
-				dribbbleUrls[i] + '" class="dribbble"><div class="dribbble__shot"><img src="' +
-				dribbbleImage[i] + '" /></div></div>');
+		var shotWidth = pageWidth / numberOfShotsPerLine,
+			dribbbleContainerHeight = ((shotWidth / 4) * 3) * rows;
+
+			console.log(dribbbleContainerHeight);
+
+		$('.dribbble__container').css('height', dribbbleContainerHeight);
+		for (var i = 0; i < (numberOfShotsPerLine * rows); i++) {
+			var j = Math.floor(Math.random() * dribbbleImage.length);
+			$('.dribbble__container')
+			.append('<img class="dribbble__shot" style="width:' + shotWidth + 'px;" src="' +
+				dribbbleImage[j] + '" />');
 		}
-		$('.dribbble img').fadeIn('fast');
-	}
-
-	// var i = 0;
-	// var previousTheme = themeInit;
-	// $('.theme-switcher').click(function(e) {
-	// 	e.preventDefault();
-	// 	$('html').removeClass(previousTheme);
-	// 	$('html').addClass(themes[i]);
-	// 	previousTheme = themes[i];
-	// 	i++;
-	// 	if (i === 5) {
-	// 		i = 0;
-	// 	}
-	// });
-
-	$('.theme-switcher').click(function(e) {
-		e.preventDefault();
-		$('.bg-cover').toggleClass('is-toggled');
-		$('body').toggleClass('text-shadow');
-	});
+	};
 
 	var toggle = false;
 	$('.navigation__toggle').click(function(e) {

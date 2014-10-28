@@ -1089,38 +1089,51 @@ h1 {
       max-width: 1120px;
       padding: 0 40px; } }
 
-.dribbble {
+.dribbble__container {
+  position: relative;
+  margin-top: 40px; }
+  .dribbble__container:after {
+    clear: both;
+    display: table;
+    content: ""; }
+.dribbble__shot {
+  display: inline-block;
   float: left;
-  width: 100%;
-  text-align: center; }
-  @media only screen and (min-width: 480px) {
-    .dribbble {
-      width: 50%; } }
-  @media only screen and (min-width: 768px) {
-    .dribbble {
-      width: 33.33%; } }
-  @media only screen and (min-width: 1024px) {
-    .dribbble {
-      width: 25%; } }
-  .dribbble img {
-    display: none;
-    float: left;
+  margin: 0;
+  overflow: hidden; }
+  .dribbble__shot:after {
+    clear: both;
+    display: table;
+    content: ""; }
+.dribbble__overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0; }
+  .dribbble__overlay__content {
     max-width: 100%;
-    overflow: hidden;
-    -webkit-border-radius: 3px;
-            border-radius: 3px;
-    -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.2); }
-  .dribbble__shot {
-    display: inline-block;
-    width: 200px;
-    min-height: 150px;
-    margin-bottom: 20px; }
-    .dribbble__shot:after {
+    margin: 0 auto;
+    padding: 0 20px; }
+    .dribbble__overlay__content:after {
       clear: both;
       display: table;
       content: ""; }
-    .dribbble__shot small {
-      display: block;
-      text-align: right;
-      margin: 10px 0; }
+    @media only screen and (min-width: 1024px) {
+      .dribbble__overlay__content {
+        max-width: 1024px;
+        padding: 0 20px; } }
+    @media only screen and (min-width: 1200px) {
+      .dribbble__overlay__content {
+        max-width: 1120px;
+        padding: 0 40px; } }
+  .dribbble__overlay__copy {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    max-width: 500px; }
+    .dribbble__overlay__copy h1 {
+      font-family: "freight-text-pro", georgia, serif;
+      font-size: 28px;
+      font-weight: 100; }
+    .dribbble__overlay__copy p {
+      font-weight: 100;
+      font-size: 16px; }
