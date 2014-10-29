@@ -14,8 +14,6 @@ body {
 	border-top: 4px solid;
 	@include generate-theme(border-color, accent, 1);
 	font-family: $family--sans;
-	// background: radial-gradient(ellipse farthest-side at 100% 100%, lighten($body, 5%) 0%, $body 120%);
-	// color: white;
 	@include generate-theme(color, copy, 1);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
