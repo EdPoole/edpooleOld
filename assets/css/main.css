@@ -363,9 +363,6 @@ body {
     color: rgb(30, 34, 41);
     color: rgba(30, 34, 41, 1); }
 
-.text-shadow * {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-
 h1 {
   -webkit-font-feature-settings: "liga", "dlig";
      -moz-font-feature-settings: "liga", "dlig";
@@ -387,21 +384,6 @@ h1 {
     .site__width {
       max-width: 1120px;
       padding: 0 40px; } }
-
-.bg-cover {
-  background-image: url(/assets/img/cover.jpeg);
-  -webkit-background-size: cover;
-          background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
-  display: none; }
-  .bg-cover.is-toggled {
-    display: block; }
 
 @-webkit-keyframes site-fade {
   0% {
