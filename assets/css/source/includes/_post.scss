@@ -202,17 +202,7 @@
 		@include clearfix;
 		padding: 40px 0 10px 0;
 		&__link {
-			color: white;
-			@include generate-theme(color, copy, 1);
-			font-family: $family--serif;
-			font-size: 24px;
-			font-weight: 100;
-			padding: 10px 0;
-			text-decoration: none;
-			transition: all 0.3s;
-			&:hover {
-				@include generate-theme(color, accent, 1);
-			}
+			@extend .button;
 			&--newer { float: left; }
 			&--older { float: right; }
 		}

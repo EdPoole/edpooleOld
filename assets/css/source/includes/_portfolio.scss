@@ -8,19 +8,94 @@
 	}
 	&__strapline {
 		@include site-width;
-		padding-top: 40px;
-		padding-bottom: 40px;
 		font-family: $family--serif;
 		font-size: 18px;
 		font-style: italic;
 		text-align: center;
+		margin-top: -20px;
+		margin-bottom: 90px;
+		blockquote {
+			margin: 0;
+		}
 	}
 }
+
+.jdm {
+	&__container {
+		background: #2D3138;
+		height: 800px;
+	}
+	&__content {
+		@include site-width;
+		position: relative;
+		height: 100%;
+	}
+	&__copy {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		h1 {
+			font-family: $family--serif;
+			font-size: 40px;
+			font-weight: 100;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			font-size: 16px;
+			font-family: $family--serif;
+			line-height: 1.6;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
+
+.ls {
+	&__container {		
+		background-size: 1000px auto;
+		background-repeat: no-repeat;
+		background-position: 90% center;
+		height: 800px;
+	}
+	&__content {
+		@include site-width;
+		position: relative;
+		height: 100%;
+	}
+	&__copy {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		color: $text--dark;
+		h1 {
+			font-family: $family--serif;
+			font-size: 40px;
+			font-weight: 100;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			font-size: 16px;
+			font-family: $family--serif;
+		}
+	}
+}
+
 
 .dribbble {
 	&__container {
 		position: relative;
-		margin-top: 40px;
 		@include clearfix;
 	}
 

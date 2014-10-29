@@ -21,9 +21,11 @@ $media-tablet-portrait:	unquote('min-width: 480px');
 
 // Colours
 
+$text--dark: rgb(30, 34, 41);
+
 $themes: (
     theme-dark (
-        background "30, 34, 41",        
+        background "30, 34, 41",
         copy "255, 255, 255",
         accent "116, 163, 212"        
     ),
