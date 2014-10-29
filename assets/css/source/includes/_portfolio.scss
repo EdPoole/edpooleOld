@@ -23,6 +23,7 @@
 .example {
 	&__container {		
 		height: 800px;
+		overflow: hidden;
 		&--left {
 			@extend .example__container;
 		}
@@ -65,77 +66,18 @@
 }
 
 
-
-
-.ls {
-	&__container {		
-		background-size: 1000px auto;
-		background-repeat: no-repeat;
-		background-position: 90% center;
-		height: 800px;
-	}
-	&__content {
-		@include site-width;
-		position: relative;
-		height: 100%;
-	}
-	&__copy {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 50%;
-		color: $text--dark;
-		h1 {
-			font-family: $family--serif;
-			font-size: 40px;
-			font-weight: 100;
-			margin: 0;
-		}
-		p {
-			margin: 0;
-			font-size: 16px;
-			font-family: $family--serif;
-		}
-	}
-}
-
-
 .dribbble {
-	&__container {
-		position: relative;
-		@include clearfix;
-	}
-
+	position: relative;
 	&__shot {
 		display: inline-block;
+		position: absolute;
 		float: left;
 		@include clearfix;
 		margin: 0;
 		overflow: hidden;
 	}
-
-	&__overlay {
-		position: absolute;
-		top: 20px;
-		left: 0;
-		right: 0;
-		&__content {
-			@include site-width;			
-		}
-		&__copy {
-			background: rgba(0, 0, 0, 0.9);
-			padding: 20px;
-			max-width: 500px;
-			h1 {
-				font-family: $family--serif;
-				font-size: 28px;
-				font-weight: 100;
-			}
-			p {
-				font-weight: 100;
-				font-size: 16px;
-			}
-		}
+	&__copy {
+		z-index: 2;
+		background: rgba(255, 255, 255, 0.6);
 	}
-
 }

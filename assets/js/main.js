@@ -5,7 +5,7 @@
 		dribbbleImage = [],
 		pageWidth = $(document).width(),
 		numberOfShotsPerLine = 10,
-		rows = 5;
+		rows = 9;
 
 
 	$.ajax({
@@ -24,16 +24,23 @@
 
 	function buildDisplay() {
 		var shotWidth = pageWidth / numberOfShotsPerLine,
-			dribbbleContainerHeight = ((shotWidth / 4) * 3) * rows;
+			shotHeight = (shotWidth / 4) * 3,
+			shotX = 0,
+			shotY = 0,
+			col = 0;
 
-			console.log(dribbbleContainerHeight);
-
-		$('.dribbble__container').css('height', dribbbleContainerHeight);
-		for (var i = 0; i < (numberOfShotsPerLine * rows); i++) {
-			var j = Math.floor(Math.random() * dribbbleImage.length);
-			$('.dribbble__container')
-			.append('<img class="dribbble__shot" style="width:' + shotWidth + 'px;" src="' +
-				dribbbleImage[j] + '" />');
+		for (var i = 0; i < (numberOfShotsPerLine * rows + 1); i++) {
+			var j = Math.floor(Math.random() * dribbbleImage.length);		
+			$('.js-dribbble')
+			.append('<img class="dribbble__shot" style="width:' + shotWidth + 'px; left: ' + shotX  + 'px; top: ' + shotY + 'px;" src="' + dribbbleImage[j] + '" />');			
+			if (col < numberOfShotsPerLine) {
+				shotX = shotX + shotWidth;
+			} else {
+				shotX = 0;
+				shotY = shotY + shotHeight;
+				col = 0;				
+			}
+			col++;
 		}
 	};
 

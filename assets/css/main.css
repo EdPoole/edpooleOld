@@ -1121,7 +1121,8 @@ h1 {
     margin: 0; }
 
 .example__container, .example__container--left, .example__container--right {
-  height: 800px; }
+  height: 800px;
+  overflow: hidden; }
   .theme-dark .example__container--right {
     background: rgb(44, 48, 55);
     background: rgba(44, 48, 55, 1); }
@@ -1169,92 +1170,18 @@ h1 {
 .example__link {
   margin-top: 20px; }
 
-.ls__container {
-  -webkit-background-size: 1000px auto;
-          background-size: 1000px auto;
-  background-repeat: no-repeat;
-  background-position: 90% center;
-  height: 800px; }
-.ls__content {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  height: 100%; }
-  .ls__content:after {
-    clear: both;
-    display: table;
-    content: ""; }
-  @media only screen and (min-width: 1024px) {
-    .ls__content {
-      max-width: 1024px;
-      padding: 0 20px; } }
-  @media only screen and (min-width: 1200px) {
-    .ls__content {
-      max-width: 1120px;
-      padding: 0 40px; } }
-.ls__copy {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 50%;
-  color: #1e2229; }
-  .ls__copy h1 {
-    font-family: "freight-text-pro", georgia, serif;
-    font-size: 40px;
-    font-weight: 100;
-    margin: 0; }
-  .ls__copy p {
-    margin: 0;
-    font-size: 16px;
-    font-family: "freight-text-pro", georgia, serif; }
-
-.dribbble__container {
+.dribbble {
   position: relative; }
-  .dribbble__container:after {
-    clear: both;
-    display: table;
-    content: ""; }
-.dribbble__shot {
-  display: inline-block;
-  float: left;
-  margin: 0;
-  overflow: hidden; }
-  .dribbble__shot:after {
-    clear: both;
-    display: table;
-    content: ""; }
-.dribbble__overlay {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0; }
-  .dribbble__overlay__content {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px; }
-    .dribbble__overlay__content:after {
+  .dribbble__shot {
+    display: inline-block;
+    position: absolute;
+    float: left;
+    margin: 0;
+    overflow: hidden; }
+    .dribbble__shot:after {
       clear: both;
       display: table;
       content: ""; }
-    @media only screen and (min-width: 1024px) {
-      .dribbble__overlay__content {
-        max-width: 1024px;
-        padding: 0 20px; } }
-    @media only screen and (min-width: 1200px) {
-      .dribbble__overlay__content {
-        max-width: 1120px;
-        padding: 0 40px; } }
-  .dribbble__overlay__copy {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    max-width: 500px; }
-    .dribbble__overlay__copy h1 {
-      font-family: "freight-text-pro", georgia, serif;
-      font-size: 28px;
-      font-weight: 100; }
-    .dribbble__overlay__copy p {
-      font-weight: 100;
-      font-size: 16px; }
+  .dribbble__copy {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.6); }
