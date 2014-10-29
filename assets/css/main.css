@@ -1104,54 +1104,56 @@ h1 {
   .portfolio__strapline blockquote {
     margin: 0; }
 
-.jdm__container {
+.example__container, .example__container--left, .example__container--right {
   height: 800px; }
-  .theme-dark .jdm__container {
+  .theme-dark .example__container--right {
     background: rgb(44, 48, 55);
     background: rgba(44, 48, 55, 1); }
-  .theme-light .jdm__container {
+  .theme-light .example__container--right {
     background: rgb(240, 240, 240);
     background: rgba(240, 240, 240, 1); }
-.jdm__content {
+.example__content {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   height: 100%; }
-  .jdm__content:after {
+  .example__content:after {
     clear: both;
     display: table;
     content: ""; }
   @media only screen and (min-width: 1024px) {
-    .jdm__content {
+    .example__content {
       max-width: 1024px;
       padding: 0 20px; } }
   @media only screen and (min-width: 1200px) {
-    .jdm__content {
+    .example__content {
       max-width: 1120px;
       padding: 0 40px; } }
-.jdm__copy {
+.example__copy, .example__copy--right {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 50%; }
-  .jdm__copy h1 {
-    font-family: "freight-text-pro", georgia, serif;
-    font-size: 40px;
-    font-weight: 100;
-    margin: 0; }
-  .jdm__copy p {
-    margin: 0;
-    font-size: 16px;
-    font-family: "freight-text-pro", georgia, serif;
-    line-height: 1.6; }
-  .jdm__copy a {
-    color: white;
-    text-decoration: none; }
-    .jdm__copy a:hover {
-      text-decoration: underline; }
+  .example__copy--right {
+    left: 50%; }
+.example__title {
+  font-family: "freight-text-pro", georgia, serif;
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0; }
+.example__info {
+  margin: 0;
+  font-size: 16px;
+  font-family: "freight-text-pro", georgia, serif;
+  line-height: 1.6; }
+.example a {
+  color: white;
+  text-decoration: none; }
+  .example a:hover {
+    text-decoration: underline; }
 
 .ls__container {
   -webkit-background-size: 1000px auto;

@@ -20,10 +20,16 @@
 	}
 }
 
-.jdm {
-	&__container {
-		@include generate-theme(background, background-alt, 1);
+.example {
+	&__container {		
 		height: 800px;
+		&--left {
+			@extend .example__container;
+		}
+		&--right {
+			@extend .example__container;
+			@include generate-theme(background, background-alt, 1);
+		}
 	}
 	&__content {
 		@include site-width;
@@ -35,24 +41,28 @@
 		top: 50%;
 		transform: translateY(-50%);
 		width: 50%;
-		h1 {
-			font-family: $family--serif;
-			font-size: 40px;
-			font-weight: 100;
-			margin: 0;
+		&--right {
+			@extend .example__copy;
+			left: 50%;
 		}
-		p {
-			margin: 0;
-			font-size: 16px;
-			font-family: $family--serif;
-			line-height: 1.6;
-		}
-		a {
-			color: white;
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
+	}
+	&__title {
+		font-family: $family--serif;
+		font-size: 40px;
+		font-weight: 100;
+		margin: 0;
+	}
+	&__info {
+		margin: 0;
+		font-size: 16px;
+		font-family: $family--serif;
+		line-height: 1.6;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }
