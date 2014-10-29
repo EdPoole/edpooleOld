@@ -9,9 +9,18 @@
 	text-decoration: none;
 	text-transform: uppercase;	
 	transition: all 0.3s;
+	display: inline-block;
 	&:hover {
 		@include generate-theme(color, accent, 1);
 		border: 2px solid;
 		@include generate-theme(border-color, accent, 1);
+	}
+	&__link {
+		font-weight: bold;
+		text-decoration: none;
+		@include generate-theme(color, copy, 1);
+		&:hover {
+			@include generate-theme(color, accent, 1);
+		}
 	}
 }

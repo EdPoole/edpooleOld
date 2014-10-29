@@ -51,6 +51,7 @@
 		font-size: 40px;
 		font-weight: 100;
 		margin: 0;
+		margin-bottom: 6px;
 	}
 	&__info {
 		margin: 0;
@@ -58,12 +59,8 @@
 		font-family: $family--serif;
 		line-height: 1.6;
 	}
-	a {
-		color: white;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
+	&__link {
+		margin-top: 20px;
 	}
 }
 
