@@ -1,12 +1,13 @@
 .button {
 	color: white;
+	border: 2px solid;
 	@include generate-theme(color, copy, 1);
+	@include generate-theme(border-color, copy, 1);
 	font-size: 12px;
 	font-weight: 500;
 	padding: 10px 14px;
 	text-decoration: none;
-	text-transform: uppercase;
-	border: 2px solid white;
+	text-transform: uppercase;	
 	transition: all 0.3s;
 	&:hover {
 		@include generate-theme(color, accent, 1);

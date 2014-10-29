@@ -12,6 +12,12 @@
 			display: block;
 			text-decoration: none;
 			margin: 0 0 60px 0;
+			transition: all 0.3s;
+			&:hover {
+				.post__list__title {
+					@include generate-theme(color, accent, 1);
+				}
+			}
 		}
 		&__date {
 			@include generate-theme(color, copy, 0.7);
@@ -25,7 +31,7 @@
 			font-weight: 300;
 			font-family: $family--serif;
 			@include generate-theme(color, copy, 1);
-			margin: 0;
+			margin: 0;			
 		}
 		&__excerpt {
 			font-size: 16px;

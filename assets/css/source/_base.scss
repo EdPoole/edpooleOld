@@ -11,6 +11,8 @@ html {
 body {
 	height: 100%;	
 	@include generate-theme(background, background, 1);
+	border-top: 4px solid;
+	@include generate-theme(border-color, accent, 1);
 	font-family: $family--sans;
 	// background: radial-gradient(ellipse farthest-side at 100% 100%, lighten($body, 5%) 0%, $body 120%);
 	// color: white;

@@ -22,7 +22,7 @@
 
 .jdm {
 	&__container {
-		background: #2D3138;
+		@include generate-theme(background, background-alt, 1);
 		height: 800px;
 	}
 	&__content {
