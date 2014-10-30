@@ -1172,6 +1172,16 @@ h1 {
 
 .dribbble {
   position: relative; }
+  .dribbble:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    content: ""; }
   .dribbble__shot {
     display: inline-block;
     position: absolute;
@@ -1184,4 +1194,15 @@ h1 {
       content: ""; }
   .dribbble__copy {
     z-index: 2;
-    background: rgba(255, 255, 255, 0.6); }
+    background: #1E2229;
+    padding: 10px 10px 20px 20px; }
+  .dribbble__title {
+    color: white; }
+  .dribbble__info {
+    color: white; }
+  .dribbble__button {
+    border: 2px solid white !important;
+    color: white !important; }
+    .dribbble__button:hover {
+      border: 2px solid #EA4C89 !important;
+      color: #EA4C89 !important; }

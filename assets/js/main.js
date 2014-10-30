@@ -5,7 +5,9 @@
 		dribbbleImage = [],
 		pageWidth = $(document).width(),
 		numberOfShotsPerLine = 10,
-		rows = 9;
+		rows = 9,
+		speed = 2000,
+		enabled = true;
 
 
 	$.ajax({
@@ -18,6 +20,9 @@
 				dribbbleImage[i] = data.shots[i].image_url;
 			});
 			buildDisplay();
+			window.setInterval(function() {
+				
+			}, 2000);
 		}
 	});
 
