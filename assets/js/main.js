@@ -4,10 +4,19 @@
 	var dribbbleUrl = 'http://api.dribbble.com/players/edpoole/shots/',
 		dribbbleImage = [],
 		pageWidth = $(document).width(),
-		numberOfShotsPerLine = 10,
+		columns = 10,
 		rows = 9,
 		speed = 2000,
-		enabled = true;
+		enabled = true,
+		display = [],
+		concurrentShots = 60,
+		randomShot,
+		shotCount = 0,
+		left = 0,
+		top = 0;
+
+	var shotWidth = pageWidth / columns;
+	var shotHeight = (shotWidth / 4) * 3;
 
 
 	$.ajax({
@@ -19,35 +28,44 @@
 			$.each(data.shots, function(i, shot) {
 				dribbbleImage[i] = data.shots[i].image_url;
 			});
-			buildDisplay();
+
+			for (var i = 0; i < concurrentShots; i++) {
+				randomShot = Math.floor(Math.random() * dribbbleImage.length);
+				display.push(dribbbleImage[randomShot]);
+			}			
 			window.setInterval(function() {
+
+				left = Math.floor(Math.random() * columns) * shotWidth;
+				top = Math.floor(Math.random() * rows) * shotHeight;
+
+				// Remove image from the DOM
+
+				if (!shotCount < concurrentShots) {
+					var i = shotCount - concurrentShots;
+					$('#' + i).fadeOut();
+					window.setTimeout(function() {
+						$('#' + i).remove();
+					}, 300);
+				}
+
+				// Remove the first image from the array
+				display.shift();
+
+				// generate a new random image and push it onto the array queue
+				randomShot = Math.floor(Math.random() * dribbbleImage.length);
+				display.push(dribbbleImage[randomShot]);
+
+				// render image				
+				$('.js-dribbble').append('<img id="' + shotCount + '" class="dribbble__shot" style="width:' + shotWidth + 'px; left: ' + left  + 'px; top: ' + top + 'px;" src="' + display[0] + '" />');
 				
-			}, 2000);
+
+				$('#' + shotCount).hide().fadeIn();
+
+				shotCount++;
+
+			}, 1000);
 		}
 	});
-
-
-	function buildDisplay() {
-		var shotWidth = pageWidth / numberOfShotsPerLine,
-			shotHeight = (shotWidth / 4) * 3,
-			shotX = 0,
-			shotY = 0,
-			col = 0;
-
-		for (var i = 0; i < (numberOfShotsPerLine * rows + 1); i++) {
-			var j = Math.floor(Math.random() * dribbbleImage.length);		
-			$('.js-dribbble')
-			.append('<img class="dribbble__shot" style="width:' + shotWidth + 'px; left: ' + shotX  + 'px; top: ' + shotY + 'px;" src="' + dribbbleImage[j] + '" />');			
-			if (col < numberOfShotsPerLine) {
-				shotX = shotX + shotWidth;
-			} else {
-				shotX = 0;
-				shotY = shotY + shotHeight;
-				col = 0;				
-			}
-			col++;
-		}
-	};
 
 	var toggle = false;
 	$('.navigation__toggle').click(function(e) {
